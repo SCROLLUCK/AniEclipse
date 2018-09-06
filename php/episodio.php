@@ -1,11 +1,7 @@
 <?php
+  
+  include("conexaoAnieDB.php");
 
-  $target="anime.php";
-  if(basename($_SERVER["PHP_SELF"])== $target){
-    die("<meta charset='utf-8'><title></title><script>window.location=('index.php')</script>");
-  }
-  
-  
   class Episodio {
     public $ID;
     public $Uploader;
@@ -18,11 +14,10 @@
     public $NomeArquivo;
     public $QualidadeMax;
     public $Temporada;
-    public $Status;
     public $DataPostagem;
     public $Views;
     
-    public function __construct($ID,$Uploader,$Animacao,$Obra,$Nome,$Numero,$Duracao,$Thumb,$NomeArquivo,$QualidadeMax,$Temporada,$Status,$DataPostagem){
+    public function __construct($ID,$Uploader,$Animacao,$Obra,$Nome,$Numero,$Duracao,$Thumb,$NomeArquivo,$QualidadeMax,$Temporada,$DataPostagem,$Views){
         $this->ID = $ID;
         $this->Uploader = $Uploader;
         $this->Animacao = $Animacao;
@@ -34,14 +29,24 @@
         $this->NomeArquivo = $NomeArquivo;
         $this->QualidadeMax = $QualidadeMax;
         $this->Temporada = $Temporada;
-        $this->Status = $Status;
         $this->DataPostagem = $DataPostagem;
+        $this->Views = $Views;
     }
     
     public function altera($campo,$novoValor){
         $this->$campo = $valor;
     }
     
+  }
+
+  if($_GET['temporada']=="atual"){
+    $resultEpisodios = $mysqli->query("SELECT * FROM episodios WHERE animacao = 0 ORDER BY id DESC LIMIT 20");
+    while($linhaEpisodios = $resultEpisodios->fetch_assoc()){
+        $NovoEpisodio = new Episodio($linhaEpisodios['id'],$linhaEpisodios['uploader'],$linhaEpisodios['animacao'],$linhaEpisodios['obra'],$linhaEpisodios['nome'],$linhaEpisodios['numero'],$linhaEpisodios['duracao'],$linhaEpisodios['thumb'],$linhaEpisodios['nomeArquivo'],$linhaEpisodios['qualidadeMax'],$linhaEpisodios['temporada'],$linhaEpisodios['dataPostagem'],$linhaEpisodios['views']);
+        $ListaEpisodios[] = $NovoEpisodio;
+    }
+
+    echo json_encode($ListaEpisodios);
   }
 
 ?>

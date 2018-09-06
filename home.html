@@ -15,18 +15,10 @@
       	<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/jquery.js"></script>
-		<script type="text/javascript" src="controllerHome.js"></script>
-		<script type="text/javascript">
-            $(document).ready(function() {
-                $("input[type=button]").click(function(event) {
-                    var acao = $(this).attr("value");
-                    $("#box").load('listas.php',{acc:acao});
-                });
-            });
-        </script>
+		<script type="text/javascript" src="js/controllerHome.js"></script>
 	</head>
 
-	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;">
+	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;" onload="temporadaAtual();">
 		<div class="sub" onclick="LimpaBuffer();">
       
 		<div class="CENTER">
@@ -63,26 +55,7 @@
 				</div>
 				
 				<div class="SLIDE-HORIZONTAL" id="box">
-					<ul id="TEMPORADA-ATUAL" class="TT">
-					    
-						<div class="EP LANCA">
-							<p class="tempo">12:00</p>
-                          	<p class="final">FINAL</p>
-							<a href="linkEp#" title="NomeDoEpisodio">
-                              <img class="THUMB" src="diretorioThumb>">
-                          	</a>
-							<div class="identifica">
-								<a class="link-logo" href="diretorioANime" title="NomeANime">
-                                  <img class="logo-anime" src="diretorioLogo">
-                              	</a>
-								<a href="diretorioEp">
-                                    <p class="episodio">EPISODIO 17></p>
-									<p class="anime">NOME DO ANIME</p>
-                                    <p class="nomeEP">Nome do Ep</p>
-								</a>
-							</div>
-						</div>
-					</ul>
+					<img src="img/loading.gif" style="position: relative; float: left; width: 300px; left: 50%; transform: translateX(-50%);">
 			</div>
 		</div>
 		

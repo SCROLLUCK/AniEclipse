@@ -12,7 +12,7 @@
   global $senha;
   $senha = "281295";
   global $banco;
-  $banco = "databaseAnie";
+  $banco = "aniedb";
 
   global $mysqli;
 

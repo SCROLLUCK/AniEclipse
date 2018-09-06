@@ -1,0 +1,271 @@
+#wrap11{
+    width: 96%;
+    background: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    box-shadow: 1px 4px 2px 4px #1e1d1d;
+    -webkit-box-shadow: 1px 4px 2px 4px #1e1d1d;
+    overflow: hidden;
+    height: 100%;
+    margin: 0% auto;
+    padding: 0;
+}
+.Capa-User {
+    background: url(animes/shingeki-no-kyojin-2/Imagens/shingeki2.jpg);
+    background-size: 100%;
+    position: relative;
+    height: 518px;
+    padding-top: 96px;
+    background-position-y: -72px;
+}
+.foto-user {
+    width: 300px;
+    min-height: 300px;
+    position: absolute;
+    border-radius:  50%;
+    top: -30%;
+    z-index: 2;
+    margin: 16px;
+    left: 0%;
+    box-shadow: 0 0 6px 1px #23201e;
+}
+.foto-user img {
+    width: 100%;
+    height: 100%;
+}
+
+.nick p{
+    float:left;
+}
+
+.UPLOADER{
+    margin: 21px 0px;
+    background: #FF4800;
+    padding: 5px;
+    position:  relative;
+    color: black;
+    font-size: 12px;
+    float:  left;
+    border-radius: 2px;
+}
+
+.NICK{
+    font-size: 29px;
+    margin: 19px 16px 10px 0px;
+    padding: 0;
+    color: white;
+    float:  left;
+    margin-left: 342px;
+}
+
+div.Info-User{
+  position:relative;
+}
+
+.Info-plus-User {
+    background: rgba(226, 226, 226, 0.65);
+    height: auto;
+    position: relative;
+    float: left;
+    border-radius: 12px;
+    margin-left: 38px;
+    padding: 14px;
+    padding-left: 305px;
+}
+
+.Info-plus-User p {
+    margin: 2px;
+    color: rgba(51, 51, 51, 0.77);
+    float: left;
+    clear: both;
+    font-family:  roboto_bold;
+}
+
+.BUTTON {
+    text-decoration: none;
+    color: white;
+    text-decoration-line: none;
+    margin: 8px 2px;
+    font-size: 13px;
+    padding: 15px;
+    position: relative;
+    border-radius: 2px;
+    float: left;
+    background: rgba(28, 28, 28, 0.91);
+}
+.BUTTON:hover {
+    background: #ff4800;
+}
+
+.BUTTON:active {
+    color: rgba(28, 28, 28, 0.91);
+    background:#ff6600;
+}
+.Edit {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    bottom: 5%;
+    right: 14%;
+    border: 1px solid #333333b3;
+    background: #f0f8ffb3;
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.Edit:hover {background:  white;}
+.Favoritos {
+    float: right;
+    top: 16px;
+    background: #ed2553;
+    position: absolute;
+    border-radius: 3px;
+    right: 1%;
+    cursor: pointer;
+}
+.Favoritos a {
+    padding: 14px;
+    text-decoration:none;
+    font-family: Verdan;
+    color: white;
+    float: left;
+}
+
+p.designerNOME {
+    position:  absolute;
+    font-weight: 800;
+    font-size: 50px;
+    right: 4%;
+    font-style: italic;
+    user-select:  none;
+    -webkit-user-select: none;
+    font-family: roboto_bold;
+    color: rgba(51, 51, 51, 0.42);
+}
+
+.navOP {
+    margin:  0;
+    padding: 0;
+    padding-left: 45px;
+    position: absolute;
+    width: 100%;
+    bottom:  0%;
+    height: 55px;
+    background: rgb(33, 32, 32);
+}
+
+p.OP_nav {
+    color: rgba(6, 227, 243, 0.8);
+    margin:  0;
+    position:  relative;
+    padding: 17px;
+    font-weight: 800;
+    font-family:  roboto_regular;
+    background: rgba(28, 28, 28, 0.91);
+    border-bottom: 3px solid rgba(6, 193, 243, 0.8);
+}
+.tituloOP {
+    float: left;
+    position: relative;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: -webkit-center;
+    align-self: center;
+    vertical-align: middle;
+}
+
+.tituloOP:hover {
+    background: rgba(6, 227, 243, 0.8);
+}
+
+.tituloOP:hover .OP_nav {
+    background: none;
+    color: black;
+}
+
+.caixa-style {
+    position:  relative;
+    float:  left;
+    width:  100%;
+    height: 76px;
+}
+
+.INP-ControllPerfil {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+    bottom: 0;
+    opacity: 0;
+}
+
+.listaPerfil {
+    position: relative;
+    clear: both;
+    bottom: -46%;
+    float:  left;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ANIME-OBRA {
+    width: 300px;
+    margin: 6px;
+    max-height: 444px;
+    min-height: 444px;
+    position: relative;
+    display: inline-block;
+}
+.ANIME-OBRA img {
+    width: 100%;
+    height: 444px;
+    float: left;
+}
+.INFO-ANIME {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.LINK-ANIMEE {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ANIME-OBRA:hover .INFO-ANIME{
+  opacity: 1;
+}
+.NOME-ANIME {
+    position: relative;
+    margin: 0;
+    font-family: Verdan;
+    float: left;
+    font-size: 19px;
+    color: white;
+    white-space: initial;
+    padding: 0;
+}
+.generos-add {
+    font-family: roboto_regular;
+    font-size: 11px;
+    float: left;
+    clear: both;
+    color: red;
+    white-space: initial;
+    margin: 0;
+    padding: 0;
+}
+.Jumento-Cavalinho {
+    position: absolute;
+    top: 50%;
+    padding: 12px 20px;
+    width: calc(100% - 40px);
+    background: #1b1a1a;
+    transform: translateY(-50%);
+}

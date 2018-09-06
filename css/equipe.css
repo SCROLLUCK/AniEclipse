@@ -1,0 +1,198 @@
+#wrap_Equipe{
+	width: 90%;
+	margin: 0 auto;
+	background: #1e1d1d;
+	height: auto;
+	max-width: 1200px;
+}
+.Logo-site {
+	width: 100%;
+    background: #1e1d1d;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: -1px 3px 5px 0px rgba(4, 4, 4, 0.35);
+}
+.Logo-site img{
+	height: 100%;
+}
+.uploader {
+    background: #ff6600;
+    color: #1e1d1d;
+    padding: 6px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.desenvolvedor {
+	background: #de1111;
+    color: white;
+	padding: 6px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.patrocinador {
+	color: #18e057;
+}
+.vip {
+	color: #9502de;
+	transform: rotate(25deg); 
+}
+.rotate {
+	transform: rotate(25deg); 
+}
+h2 {
+	font-size: 35px;
+    font-family: arial;
+    margin: 12px;
+    color: white;
+    float: left;
+}
+.Membros {
+	float: left;
+    width: 576px;
+    margin: 12px;
+    background: #1e1d1d;
+    box-shadow: inset 1px 3px 7px 0px rgb(21, 20, 20);
+    border-radius: 4px;
+    padding: 0px;
+  	min-height:303px;
+    position: relative;
+}
+.Membros p {
+	font-size: 15px;
+    font-family: arial;
+    width: 385px;
+    clear: both;
+    font-style: italic;
+    float: left;
+    padding-left: 15px;
+}
+a.interresado {
+    background: #ff6600;
+    color: rgb(21, 20, 20);
+    float: left;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    clear: left;
+    font-family: arial;
+    font-size: 13px;
+    padding: 12px;
+    margin: 6px 0px 19px 13px;
+}
+p.Info-USER {
+	color: white;
+    background: #333;
+    margin: 0;
+    padding: 8px;
+    bottom: 113%;
+    width: auto;
+    border-radius: 3px;
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.Info-USER:before {
+	content: "";
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    position: absolute;
+    border-left: 13px solid transparent;
+    border-top: 15px solid #333;
+    border-right: 13px solid transparent;
+}
+.Perfil {
+	float: left;
+    width: 104px;
+    border-radius: 50%;
+    height: 104px;
+    position: relative;
+    background: #ff6600;
+    padding: 0;
+    margin: 10px 5px;
+    list-style: none;
+    background:url(../IMagens/Ekaterina.png);
+}
+.interno {
+	color: rgba(255, 255, 255, 0.84);
+    left: calc(50% - 16px);
+    top: calc(50% - 21px);
+    position: absolute;
+}
+.Perfil:hover .Info-USER{
+	display: block;
+}
+
+.a-perfil{
+	position: absolute;
+    border-radius: 50%;
+    display: none;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+	height: 100%;
+}
+.Perfil:hover .a-perfil {
+	display: block;
+}
+.AREA {
+	color: #bbb84e;
+	text-align: center;
+}
+.Enfase {
+	font-size: 12px;
+    font-family: arial,roboto_bold;
+    font-style: initial;
+    color: white;
+}
+.Mais-detalhes {
+	display: none;
+	width: 100%;
+    float: left;
+    position: relative;
+}
+.M-detalhes {
+	position: absolute;
+    right: 12px;
+    border-radius: 2px;
+    top: 12px;
+    text-decoration: none;
+    font-family: arial,roboto_regular;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background: #ff6600;
+}
+.Users {
+    float: left;
+    min-width: 200px;
+}
+
+
+
+
+
+.Sites-Parceiros {
+	position: relative;
+    float: left;
+    width: 100%;
+    box-shadow: -1px -2px 5px 0px rgba(4, 4, 4, 0.35);
+    height: auto;
+    background-image: linear-gradient(90deg,#1e1d1d 0%,#1e1d1d 33.3%,#ff6600 0%,#ff6600 66.6%,#1e1d1d 0%,#1e1d1d 100%);
+    background-size: 100%;
+}
+ul.LISTA-SITES {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+li.SITE {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    list-style: none;
+}

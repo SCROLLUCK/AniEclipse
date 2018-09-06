@@ -1,0 +1,304 @@
+* {margin:0;padding: 0;}
+html, body {height:100%;width: 100%;float: left;}
+body{
+    background-image: url(back-SNS.jpg);
+    background-size: 100%;
+    position: relative;
+}
+#EPS {
+    float: left;
+    padding: 0;
+    background-size: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+#nome-anime {
+    font-size: 34px;
+    float: left;
+    color: white;
+    text-shadow: 1px 1px 2px #101010;
+    z-index: 3;
+    position: relative;
+    max-width: 59%;
+    /* clear: both; */
+    font-family: roboto_regular;
+    padding: 0;
+    margin: 34px;
+    margin-bottom: 16px;
+}
+
+.ENGLOBAL {
+    position: relative;
+    float: right;
+    padding: 93px 80px 38px 55px;
+    width: auto;
+    height: auto;
+    margin: 0 73px;
+    border-radius: 8px;
+}
+
+.COMP-LOGO {
+    height: 133px;
+    float: left;
+    position: relative;
+}
+
+img.LOGO {
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.parallax {
+    margin: 0 auto;
+    width: 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+div#back-blur {
+    position:  relative;
+    background-image: url(img1.jpg);
+    background-size: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+    margin: 0;
+    filter: blur(2px);
+}
+
+div#home:hover #back-blur {
+    filter: blur(0px);
+}
+
+#info-anime {
+    height: auto;
+    background: rgba(0,0,0,0.4);
+    float: left;
+    width: 100%;
+}
+.INFO {
+    position: relative;
+    padding-top: 50px;
+    float: left;
+    width: 100%;
+    z-index: 2;
+}
+
+ul.EPISODIOS {
+    float: left;
+    position: relative;
+    background: rgb(33,32,32);
+    width: auto;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    display:  grid;
+    grid-template-columns:  repeat(auto-fit,minmax(300px,auto));
+    grid-row-gap:  6px;
+    grid-column-gap:  6px;
+    padding: 6px;
+}
+
+.Info-anime {
+    position: relative;
+    width: 61%; /* mobile 64%*/
+    max-width: 768px;
+    float: left;
+    /* margin-bottom: 90px; */
+    height: auto;
+    margin-left: 2%;
+    overflow: hidden;
+    border-radius: 3px;
+    /* background: rgba(48, 47, 47, 0.87); */
+    transition-duration: .2s;
+}
+.info {
+    width: 100%;
+    padding: 6px 12px 0 12px;
+    margin: 0;
+    font-family: roboto_light;
+    font-size: 14px;
+    float: left;
+    text-decoration: none;
+    color: silver;
+    position: relative;
+    clear: both;
+}
+.name-info {
+    font-family: roboto_bold;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.thumb-episodio:hover .Info-anime {
+     right: 0%;
+}
+.temporadaAtual {
+    width: 34%;
+    position: relative;
+    float: left;
+    /* margin-bottom: 90px; */
+    border-radius: 4px;
+    box-shadow: 1px 1px 11px #000;
+    overflow: hidden;
+}
+.temporada-Info {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    background: #333;
+    padding: 6px;
+    font-size: 13px;
+    color: white;
+    font-family: roboto_regular;
+}
+img.capa {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+.cap-conveniente {
+    position: relative;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.Sinopse {
+    color: silver;
+    font-family: arial;
+    padding: 0px 12px;
+    float: left;
+    max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 14;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+p.alt-nome {
+    left: 0;
+    color: gainsboro;
+    font-size: 15px;
+}
+p.faixa {
+    padding: 9px;
+    color: white;
+    font-family: arial;
+    background: #ff0046;
+    position: relative;
+    font-size: 34px;
+    float: right;
+    border-radius: 3px;
+}
+.info-visual {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: auto;
+    padding: 14px;
+}
+.responsavel {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    float: right;
+    margin-right: 14px;
+}
+.EPISODIO {
+    width: 261px;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 4px;
+}
+.E-M {
+    color: #00bfff;
+    text-decoration: none;
+    float: left;
+    margin: 6px 3px;
+}
+.linkAnimes {
+    background: #ff4800;
+    padding: 7px;
+    position: relative;
+    text-decoration: none;
+    float: left;
+    color: white;
+    border-radius: 2px;
+    margin: 0 0 5px 5px;
+}
+
+a.numero-EP {
+    text-align: center;
+    position: absolute;
+}
+
+.CENTER {
+    width: 90%;
+    position: relative;
+    max-width: 1200px;
+    left: 50%;
+    background: rgba(48, 47, 47, 0.87);
+    transform: translateX(-50%);
+    margin-bottom: 90px;
+}
+.ant { left: 0%;}
+.prox { right: 0%; }
+.seta {
+    top: calc(50% - 57px);
+    width: 51px;
+    text-align: center;
+    z-index: 30;
+    height: 236px;
+    position: absolute;
+    background: rgba(48, 47, 47, 0.87);
+}
+
+.SETA-ico {
+    top: calc(50% - 22px);
+    color: silver;
+    position: relative;
+    font-size: 44px;
+}
+
+.O-ant { left:  70px; }
+.O-prox { right: 70px; }
+.O-temporada {
+    width: 313px;
+    box-shadow: 1px 1px 11px #000;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 20;
+    border-radius: 4px;
+}
+.link-temporada {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0%;
+    z-index: 90;
+}
+.white-space-4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -20px;
+}
+.white-space-5 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: -20px;
+}
+.seta:hover .O-temporada { display: block; }

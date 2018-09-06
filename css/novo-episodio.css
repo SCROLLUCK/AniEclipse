@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Verdan";
+  src: url("../fontes/verdana.ttf");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../fontes/Roboto.ttf");
+}
+@font-face {
+  font-family: "roboto_light";
+  src: url("../fontes/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "roboto_medium";
+  src: url("../fontes/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "roboto_regular";
+  src: url("../fontes/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto_bold";
+  src: url("../fontes/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "roboto_black";
+  src: url("../fontes/Roboto-Black.ttf");
+}
+
+.CENTER {
+	margin-top: 115px;
+	width: 96%;
+	position: relative;
+	max-width: 1400px;
+	float: left;
+	left: 50%;
+	margin-bottom: 60px;
+	transform: translateX(-50%);
+}
+
+.INFO-EPISODIO {
+	width: 365px;
+    height: 400px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #232323;
+}
+
+.SUB {
+    position: relative;
+    float: left;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.53);
+    height: auto;
+    min-height: 100%;
+}
+
+.CONT-EPISODIO {
+    position: absolute;
+    width: 100%;
+    background:  #333;
+    height:  auto;
+    z-index: 1;
+    border-top: 4px solid #333;
+}
+
+h2.NAME-ANIME {
+    font-size: 18px;
+    color: white;
+    font-family: roboto_regular;
+    margin: 0;
+    left:  0%;
+    position: absolute;
+    z-index: 40;
+    width:  100%;
+    height: 106px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.68);
+    padding: 23px;
+    background: linear-gradient( rgba(29, 29, 29, 0.8) 0%,transparent 100%);
+}
+
+p.NAME-EPISODIO {
+    color: #fb4d26;
+    padding: 0;
+    font-size: 17px;
+    font-family: roboto_bold;
+    margin: 0;
+}
+
+div#PAUSADO {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 30;
+}
+
+img.capa-PAUSADO {
+    width: 30%;
+    max-width: 300px;
+    clear: both;
+    float: left;
+}
+
+p.wathing {
+    color: silver;
+    float: left;
+    padding: 5px;
+    padding-top: 0;
+}
+
+.CRIS_GREG {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(25, 24, 24, 0.91);
+    float: left;
+    top: 50%;
+    border-left: 5px solid #ff4800;
+    /* border-right: 3px solid #ff4800; */
+    transform: translateY(-50%);
+}
+
+h1.Titulo-PAUSADO {
+    color: white;
+    font-size: 41px;
+    position: absolute;
+    left: 33%;
+    float: left;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+p.TEMP-EP {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+
+.THUMB-EPISODIO {
+    height: auto;
+    width: 100%;
+    float: left;
+    box-shadow: 0px 3px 4px #111;
+}
+
+/*88888888888888888 PLAYER 88888888888888888*/ 
+
+.clear{clear: both;} /* CLEARFIX */
+.left{float: left;}
+.right{float: right;}
+
+.conteiner{float: left;position: relative;border-radius: 4px;overflow:  hidden;box-shadow: 1px 1px 8px #000;}
+
+
+
+/* VIDEO PLAYER*/
+.player-video{position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow:hidden; background-color: #000;}
+.player-video video{width: -webkit-fill-available; left: 0; top: 0; height: 100%; position: absolute; left: 50%; transform: translateX(-50%);}
+.player-video .loader{position: absolute; display: none; width:50px; height: 50px; text-align: center; padding-top: 8px; top: calc(50% - 25px); left: calc(50% - 25px); background-color: #111; border-radius:5px; }
+
+.player-video .loader span{display: block; color: #fff; font-size: 2.2em; animation: spin 2s linear infinite;}
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.player-video:hover .controls{opacity: 1;}
+
+.player-video .controls{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 40;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: -o-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: -moz-linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    background: linear-gradient(rgba(0,0,0,0.01), rgba(0,0,0,0.7));
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.player-video .progress-bar{position: relative; float: left; width: 100%; height: 4px; background-color: rgba(255,255,255,0.5); cursor: pointer;}
+
+.player-video .video-loaded{position: absolute; top: 0; left: 0; height: 4px; width:0%; background-color: #333;}
+
+.player-video .video-progress{position: absolute;top: 0;left: 0;height: 4px;width: 0%;background-color: #ff4800;}
+
+.player-video .video-progress span{position: relative;float: right;top: -5px;right: -7px;width: 14px;height: 14px;background-color: #ff4800;border-radius: 50%;}
+
+.player-video .control{padding: 6px 0; min-width: 40px; text-align: center; cursor: pointer; margin-left: 5px; margin-left: 5px;}
+.player-video .control span{color: #fff; font-size: 1.5em;}
+
+.player-video .slider{
+    position: relative;
+    float: left; 
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+.player-video .slider .back{
+    position: relative; 
+    background-color: rgba(255,255,255,0.6);
+    width:70px; height: 5px;
+    margin-top: 15px;
+}
+.player-video .slider .bar{position: relative; background-color: #fff; height: 5px; width: 90%;}
+.player-video .slider span{position: relative; float: right; background-color: #fff; width: 13px; height: 13px; border-radius: 50%; top: -4px; right: -6px;}
+.player-video .audio:hover{}
+
+.player-video .time{padding: 8px 10px; cursor: default; margin-top: 4px; margin-left: 15px;}
+.player-video .time .time-video{float: left; color: #fff; font-size: 0.9em; font-weight: 100;}
+
+.body {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin: 0;
+}
+.someDiabo{
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}		

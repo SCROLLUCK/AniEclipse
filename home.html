@@ -15,16 +15,8 @@
       	<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/jquery.js"></script>
-		<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-        <script>
-          var OneSignal = window.OneSignal || [];
-          OneSignal.push(function() {
-            OneSignal.init({
-              appId: "6bfec45e-6e57-402f-8815-bf1a46f0f8ee",
-            });
-          });
-        </script>
-        <script type="text/javascript">
+		<script type="text/javascript" src="controllerHome.js"></script>
+		<script type="text/javascript">
             $(document).ready(function() {
                 $("input[type=button]").click(function(event) {
                     var acao = $(this).attr("value");

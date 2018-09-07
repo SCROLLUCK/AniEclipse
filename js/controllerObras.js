@@ -44,15 +44,14 @@ function exibeAnimes(opcao) {
                     
                     while(contador < ListaAnimes.length){
                         html += "<div class='Anime'>";
-                        html += "<p class='nome-anime'>"+ListaAnimes[contador].Nome+"</p>";
                         html += "<div class='thumb-episodio' style='background: #1b1a1a url(../"+ListaAnimes[contador].Diretorio+"/img/"+ListaAnimes[contador].Capa+"); background-size: cover; background-position: center;'>";
                         html += "<div class='Info-anime'>";
+                        html += "<p class='nome-anime'>"+ListaAnimes[contador].Nome+"</p>";
                         html += "<p class='info'><span class='name-info'>Lançamento: </span>"+ListaAnimes[contador].DataLancamento+"</p>";
                         html += "<p class='info'><span class='name-info'>Roteirista: </span>"+ListaAnimes[contador].Roteirista+"</p>";
                         html += "<p class='info'><span class='name-info'>Estudio: </span>"+ListaAnimes[contador].Estudio+"</p>";
                         html += "<p class='info'><span class='name-info'>Status: </span>"+ListaAnimes[contador].Status+"</p>";
-                        html += "<p class='info'><span class='name-info'>Episódios: </span>"+ListaAnimes[contador].Episodios+"</p>";
-                        html += "<a class='link-anime' href='../"+ListaAnimes[contador].Diretorio+"'>Assista Agora!</a>";
+                        html += "<p class='info' style='width:100%;'><span class='name-info'>Episódios: </span>"+ListaAnimes[contador].Episodios+" <a class='link-anime' href='../"+ListaAnimes[contador].Diretorio+"'>Assista Agora!</a></p>";
                         html += "<p class='Sinopse'>"+ListaAnimes[contador].Sinopse+"</p>";
                         html += "</div>";
                         html += "</div>";

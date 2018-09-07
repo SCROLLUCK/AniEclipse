@@ -16,6 +16,7 @@
       	<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/controllerHome.js"></script>
+		<script type="text/javascript" src="js/dragSCROLL.js"></script>
 	</head>
 
 	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;" onload="temporadaAtual();">
@@ -44,7 +45,7 @@
 						<i class="fa fa-list-ul" aria-hidden="true"></i>
 					</p>
 					
-					<p class="ICO UV" style="background: url("DiretorioDafotoDoUsuario"); width: 40px; height: 40px; border-radius: 50%; background-size: cover; background-position: center center; float: left; margin: 9px 0;" onclick="exibe(6,1);"><input type="button" title="Ultimos Vistos" value="ultimosVistos" class="INP-Controll"></p>
+					<p class="ICO UV" style="background: url(DiretorioDafotoDoUsuario); width: 40px; height: 40px; border-radius: 50%; background-size: cover; background-position: center center; float: left; margin: 9px 0;" onclick="exibe(6,1);"><input type="button" title="Ultimos Vistos" value="ultimosVistos" class="INP-Controll"></p>
 				
 
 					<p class="title-barra" style="display: none;">TEMPORADA PASSADA</p>
@@ -72,7 +73,7 @@
 				<div class="show-OBRA">
 				    <ul class="OBRAS-lista" id="LISTA" data-hover="false">
 				              
-					    <div class="OBRA-show" style="background: url("DiretorioDOBackground"); background-size: cover;">
+					    <div class="OBRA-show" style="background: url(DiretorioDOBackground); background-size: cover;">
 					    <div class="sombra">
 					       <div class="CENTER-sombra">
 					    	<div class="ABAS">
@@ -81,7 +82,7 @@
 							    <p class="OP-ABA">EPISODIOS</p>
 							    <p class="OP-ABA">ANIMES SEMELHANTES</p>         
 							</div>
-						    <div class="info-OBRA parallax" data-speed="6" style="background-position: 50% -160.333px; background: url("DiretorioDaCApaDoAnime"); background-size: 100%;"></div>
+						    <div class="info-OBRA parallax" data-speed="6" style="background-position: 50% -160.333px; background: url(DiretorioDaCApaDoAnime); background-size: 100%;"></div>
 						    <div class="info-OBRA-plus">
 							    <div class="info-OBRA-OP">
 							    <h1 class="nome-OBRA"><p class="TITULO-OBRA">ANIME </p> Nome do Anime</h1>
@@ -97,7 +98,26 @@
 					<script>slideOBRAS();</script>
 				</div>
 			</div>
-			
+		</div>
+	</div>
 		<script>loop();</script>
+
+	<div class="ANIMACOES">
+    <div class="GuiaDeNavegacao">
+		<p class="OpcaoGuia"><span class="OP-span">Lançamentos</span></p>
+		<p class="OpcaoGuia"><span class="OP-span">Adicionados</span></p>
+		<p class="OpcaoGuia"><span class="OP-span">Mais Avaliados</span></p>
+		<p class="OpcaoGuia"><span class="OP-span">Animções</span></p>
+	</div>
+		<div class="ESCONDE-SCROLLS">
+		<ul class="ListaANIMACOES" id="LISTA">
+			<div class="Capsula"></div>
+			<div class="Capsula"></div>
+			<div class="Capsula"></div>
+			<div class="Capsula"></div>
+			<div class="Capsula"></div>
+		</ul>
+		</div>
+	</div>
 </body>
 </html>

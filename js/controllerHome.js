@@ -45,14 +45,14 @@ function temporadaAtual() {
                         html += "<div class='EP LANCA'>";
                         html += "<p class='tempo'>"+UltimosEps[contador].Duracao+"</p>";
                         //html += "<p class='final'>"+UltimosEps[contador].Final+"</p>";
-                        html += "<a href='"+UltimosEps[contador].Diretorio+"/"+UltimosEps[contador].NomeArquivo+"' title='"+UltimosEps[contador].Nome+"'>";
+                        html += "<a href='"+UltimosEps[contador].Diretorio+"/episodio.php?ep="+UltimosEps[contador].Numero+"' title='"+UltimosEps[contador].Nome+"'>";
                         html += "<img class='THUMB' src='"+UltimosEps[contador].Diretorio+"/"+UltimosEps[contador].Thumb+"'>";
                         html += "</a>";
                         html += "<div class='identifica'>";
                         html += "<a class='link-logo' href='"+UltimosEps[contador].Diretorio+"' title='"+UltimosEps[contador].Obra+"'>";
                         html += "<img class='logo-anime' src='"+UltimosEps[contador].Diretorio+"img/logo.png'>";
                         html += "</a>";
-                        html += "<a href='"+UltimosEps[contador].Diretorio+"/"+UltimosEps[contador].NomeArquivo+"'>";
+                        html += "<a href='"+UltimosEps[contador].Diretorio+"/episodio.php?ep="+UltimosEps[contador].Numero+"'>";
                         html += "<p class='episodio'>EPISODIO "+UltimosEps[contador].Numero+"</p>";
                         html += "<p class='anime'>"+UltimosEps[contador].Obra.toUpperCase()+"</p>";
                         html += "<p class='nomeEP'>"+UltimosEps[contador].Nome.toUpperCase()+"</p>";

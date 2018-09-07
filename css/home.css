@@ -1,661 +1,723 @@
 @font-face {
-  font-family: "Verdan";
-  src: url("../fontes/verdana.ttf");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("../fontes/Roboto.ttf");
-}
-@font-face {
-  font-family: "roboto_light";
-  src: url("../fontes/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "roboto_medium";
-  src: url("../fontes/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: "roboto_regular";
-  src: url("../fontes/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "roboto_bold";
-  src: url("../fontes/Roboto-Bold.ttf");
-}
-@font-face {
-  font-family: "roboto_black";
-  src: url("../fontes/Roboto-Black.ttf");
-}
-
-.body {
-  width: 100%;
-  height: auto;
-  background-size: 100%;
-  float: left;
-  margin: 0;
-  padding: 0;
-  background: url(../../../img/shinmai.jpg);
-}
-.parallax {
-    margin: 0 auto;
+    font-family: "Verdan";
+    src: url("../fontes/verdana.ttf");
+  }
+  @font-face {
+    font-family: "roboto";
+    src: url("../fontes/Roboto.ttf");
+  }
+  @font-face {
+    font-family: "roboto_light";
+    src: url("../fontes/Roboto-Light.ttf");
+  }
+  @font-face {
+    font-family: "roboto_medium";
+    src: url("../fontes/Roboto-Medium.ttf");
+  }
+  @font-face {
+    font-family: "roboto_regular";
+    src: url("../fontes/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: "roboto_bold";
+    src: url("../fontes/Roboto-Bold.ttf");
+  }
+  @font-face {
+    font-family: "roboto_black";
+    src: url("../fontes/Roboto-Black.ttf");
+  }
+  
+  .body {
     width: 100%;
+    user-select: none;
+    height: auto;
     background-size: 100%;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.sub {
-    width: 100%;
-    height: auto;
-    position: relative;
     float: left;
-    padding: 126px 0;
-    background: rgba(0, 0, 0, 0.16);
-}
-
-.noticias {
-    position: relative;
-    z-index: 20;
-    width: 100%;
+    margin: 0;
     padding: 0;
-    margin-bottom: 12px;
-    border-radius: 3px;
-}
-.noticia {
-    display: inline-block;
-    background: #fffdfd;
-    color: #636363;
-    border-radius: 2px;
-    font-size: 14px;
-    border-left: 3px solid #ff542d;
-    box-shadow: 0px 1px 4px #333;
-    padding: 13px;
-    margin: 5px;
-}
-
-.CENTER {
-  width: auto;
-  position: relative;
-  left: 50%;
-  float: left;
-  transform: translateX(-50%);
-  width: 96%;
-}
-
-.TEMPORADAS {
-  position: relative;
-  /* transition: .3s; */
-  float: left;
-  width: 100%;
-  min-width: 330px;
-  height: auto;
-  border-radius: 4px;
-  overflow: hidden;
-  background:rgba(66, 45, 45, 0.5);
-  box-shadow: 0px 0px 9px -1px #333;
-}
-
-.ICO {
-    color: #cccbcb;
-    cursor: pointer;
-    position: relative;
-    background: #444343;
-    font-size: 13px;
-    border-radius: 2px;
-    font-family: arial;
-    padding: 12px;
-    margin: 8px;
-    margin-bottom:  0;
-}
-
-p.SUBICO {
-    position: relative;
-    float: right;
-    padding: 9px 10px;
-    background: #444343;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    margin: 8px 4px;
-    cursor: pointer;
-    border-radius: 50%;
-    color: #7d7a7a;
-    margin-bottom:  0;
-    margin-right:  0;
-}
-p.SUBICO:hover {
-    background: #444343;
-    color: #9c9999;
-}
-
-.DIA {
-    float: right;
-}
-.TP {
-    float: left;
-}
-.TA {
-    float: left;
-}
-.INP-Controll{
-  position: absolute;
-    left:0;
-    right:0;
-    top:0;
-    width:100%;
-    cursor:pointer;
-    bottom:0;
-    opacity:0;
-}
-.titulo-controle {
-    background: #fb4d26;
-    position: relative;
-    width: 100%;
-    min-height: 57px;
-    /* border-bottom: 3px solid #333; */
-    float: left;
-}
-.title-barra{
-    position: relative;
-    float: left;
-    font-size: 16px;
-    color: #454545;
-    font-family: roboto_regular;
-    margin: 0;
-    padding: 20px;
-}
-.SLIDE-HORIZONTAL {
-    overflow-x: hidden;
-    position: relative;
-    transition: .59s;
-    clear: both;
-    float: left;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    background: #3e3d3d;
-}
-
-.TT {
-    padding: 0 6px;
-    padding-left: 0;
-    width: 100%;
-    float: left;
-    position: relative;
-    /* border-top: 3px solid #333; */
-    margin: 0;
-    max-height: 624px;
-    display: grid;
-    overflow-y: auto;
-    grid-column-gap: 6px;
-    grid-row-gap:  6px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
-    padding:  6px;
-}
-.SIDEBAR {
-    width: 334px;
-    float: right;
-    box-shadow: 1px 2px 5px 2px #151414;
-    overflow: hidden;
-    border-radius: 4px;
-    position: relative;
-    background: #1d1c1c;
-    top: 0px;
-    padding-bottom: 49px;
-}
-.baner-anime {
-    width: 86%;
-    position: relative;
-    margin: 2% 6%;
-    height: auto;
-}
-.baner-anime img {
-  width: 100%;
-  float: left;
-}
-.baner-nome {
-    position: relative;
-    width: calc(100% - 20px);
-    height: auto;
-    float: left;
-    padding: 0 10px;
-    margin: 53px 0px 15px 0px;
-}
-.NOME-side {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    font-size: 20px;
-    font-family: arial;
-    font-weight: bold;
-    color: #f10a0a;
-    transform: translateY(-50%);
-}
-
-.infosub {
-    color: #999595;
-    font-family: arial;
-    font-size: 13px;
-    margin: 10px 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 11;
-}
-
-.EP {
-    position: relative;
-    float: left;
-    border-radius: 4px;
-    width: 100%;
-    height: 207px;
-    overflow: hidden;
-    border: 0px solid;
-    box-shadow: 1px 2px 5px 2px rgba(37, 36, 36, 0.89);
-}
-.THUMB {
-    /* width: 100%; */
-    height: 100%;
-    position: absolute;
-    top: 0;
-    transition: .2s;
-    left: 50%;
-    transform: translateX(-50%);
-    image-rendering: -webkit-optimize-contrast;
-}
-.EP:hover .THUMB {
-    /* width: 109%; */
-}
-
-.temporadaINFO {
-    position: absolute;
-    z-index: 1;
-    font-size: 11px;
-    background: rgb(33, 32, 32);
-    top: 4%;
-    display: none;
-    right: 3%;
-    color: white;
-    padding: 3px;
-    border: 1px solid white;
-    font-family: Verdan;
-}
-
-.EP:hover .temporadaINFO {
-  display: block;
-}
-.tempo {
-    position: absolute;
-    left: 0%;
-    background-color: rgba(53, 51, 50, 0.88);
-    border-radius: 2px;
-    z-index: 1;
+    background: url(../../../img/shinmai.jpg);
+  }
+  .parallax {
+      margin: 0 auto;
+      width: 100%;
+      background-size: 100%;
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+  .sub {
+      width: 100%;
+      height: auto;
+      position: relative;
+      float: left;
+      padding: 126px 0;
+      background: rgba(0, 0, 0, 0.16);
+  }
+  
+  .noticias {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 12px;
+      border-radius: 3px;
+  }
+  .noticia {
+      display: inline-block;
+      background: #fffdfd;
+      color: #636363;
+      border-radius: 2px;
+      font-size: 14px;
+      border-left: 3px solid #ff542d;
+      box-shadow: 0px 1px 4px #333;
+      padding: 13px;
+      margin: 5px;
+  }
+  
+  .CENTER {
     width: auto;
-    font-size: 11px;
-    color: white;
-    margin: 7px;
-    padding: 5px 2px;
-}
-.final {
-  position: absolute;
-  z-index: 1;
-  margin: 0;
-  font-size: 10px;
-  left: 50px;
-  padding: 6px 3px;
-  color: black;
-  background: #ff4800;
-  margin-top: 6px;
-  border-radius: 2px;
-}
-
-.identifica {
-    position: absolute;
-    bottom: 0%;
-    width: 78%;
-    z-index: 400;
-    padding: 12px 12px;
-    margin: 0;
-    background: linear-gradient(40deg, rgba(60, 60, 60, 0.7),transparent 100%);
-    /* min-height: 85px; */
-    transition: .3s;
-}
-.logo-anime {
-    max-width: 67px;
-    max-height: 67px;
-    float: left;
-}
-.link-logo {
-    position: absolute;
-    bottom: 104%;
-    left: 1%;
-    padding: 6px;
-    border-radius: 4px;
-}
-.link-logo:hover {
-  background: rgba(0,0,0,0.4);
-}
-.anime {
-    font-size: 15px;
-    white-space: initial;
-    color: white;
-    float: left;
-    text-shadow: 1px 1px 2px #000;
-    width: 100%;
-    margin: 0;
-    font-family: roboto_regular;
-}
-.episodio {
-    float: left;
-    clear: both;
-    width: 100%;
-    position: relative;
-    text-shadow: 1px 1px 2px #000;
-    margin: 0;
-    font-family: roboto_regular;
-    font-size: 11px;
-    color: rgba(0, 255, 210, 0.86);
-    margin: 3px 0;
-}
-
-.nomeEP {
-  float: left;
-  color: #d6d2d2;
-  font-size: 11px;
-  margin: 6px 0;
-  text-shadow: 1px 1px 2px #000;
-}
-.EP:hover .nomeEP {
-}
-
-.Obras {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    float: left;
-    background: #1b1a1a;
-    box-shadow: 0px -1px 7px #000;
-}
-.OBRAS-add {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  float: left;
-}
-.ANIMES {
-  position: relative;
-  width: 100%;
-  float: left;
-  border-top: 6px solid #333;
-  height: auto;
-}
-.ANIMACOES {
-  position: relative;
-  width: 100%;
-  float: left;
-  height: auto;
-}
-.middle {
-  top: 50%;
-    transform: translateY(-50%);
-    position: relative;
-}
-.right { right: 0%;}
-.left  { left: 0%;}
-.btn-slide {
-    position: absolute;
-    width: 30px;
-    background: red;
-    z-index: 40;
-    text-align: center;
-    top: calc(50% - 40px);
-    height: 100px;
-}
-p.title {
-    float: left;
-    color: #292626;
-    font-size: 28px;
-    font-family: roboto_bold;
-    margin: 0;
-    padding: 12px;
-    letter-spacing: -1px;
-    position: relative;
-    z-index:  20;
-}
-span.ENFASE {
-    font-weight: bold;
-    border-bottom: 3px solid red;
-}
-ul.Lista-OBRAS {
-    white-space: nowrap;
-    position: relative;
-    bottom: 2%;
-    transition: .59s;
-    overflow: auto;
-    clear: both;
-    float: left;
-    left: 0;
-    margin: 0;
-    width: auto;
-}
-.Lista-OBRAS::-webkit-scrollbar {
-    background-color: rgba(49, 47, 47, 0.96);
-    position: relative;
-    display: none;
-    width: 11px;
-    height: 11px;
-}
-
-.Lista-OBRAS::-webkit-scrollbar-thumb {
-    position: relative;
-    float: right;
-    background: red;
-}
-
-.ANIME-OBRA {
-    width: 300px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    border-radius: 5px;
-    margin:  2px;
-}
-.ANIME-OBRA img {
-    width: 100%;
-    position: relative;
-    top: -50%;
-    float: left;
-}
-.INFO-ANIME {
-    background: rgba(0, 0, 0, 0.03);
-    position: absolute;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-}
-
-.LINK-ANIMEE {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.ANIME-OBRA:hover .INFO-ANIME{
-  opacity: 1;
-}
-.NOME-ANIME {
-    position: relative;
-    margin: 0;
-    font-family: roboto_regular;
-    float: left;
-    font-size: 14px;
-    color: white;
-    white-space: initial;
-    padding: 0;
-}
-.generos-add {
-    font-family: roboto_regular;
-    font-size: 11px;
-    float: left;
-    clear: both;
-    color: red;
-    white-space: initial;
-    margin: 0;
-    padding: 0;
-}
-.Jumento-Cavalinho {
-    position: absolute;
-    padding: 12px 20px;
-    width: calc(100% - 40px);
-    background: rgba(27, 26, 26, 0.93);
-    float:  left;
-    bottom:  0%;
-}
-
-
-.show-OBRA {
-    position:  relative;
-    float:  left;
-    width:  100%;
-    height: auto;
-    background-size:  cover;
-    margin-bottom: 30px;
-    box-shadow: 1px 1px 16px #000;
-}
-
-ul.OBRAS-lista {
-    position:  relative;
-    width:  100%;
-    float:  left;
-    height: auto;
-    padding:  0;
-    margin:  0;
-}
-
-.OBRA-show {
-    position: relative;
-    float:  left;
-    width:  100%;
-    height: 470px;
-    background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/back-MP100.png);
-    background-size: cover;
-}
-
-.sombra {
-    position:  relative;
-    float:  left;
-    width: 100%;
-    height:  100%;
-    background: rgba(0, 0, 0, 0.27);
-}
-
-.CENTER-sombra {
     position: relative;
     left: 50%;
     float: left;
     transform: translateX(-50%);
     width: 96%;
-    height: 100%;
-    max-width: 1378px;
-}
-
-.info-OBRA {
-    position:  relative;
-    float:  left;
-    width: 33%;
-    height: 100%;
-    background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/MP100.jpg);
-    background-size:  100%;
-    margin-left: 30px;
-    box-shadow: 1px 1px 8px #0009;
-    padding-top: 300px;
-    z-index:  30;
-}
-
-.info-OBRA-plus {
-    position:  relative;
-    float: left;
-    width: 55%;
-    height:  100%;
-    left: 31px;
-    background: rgba(33, 33, 33, 0.95);
-}
-
-.info-OBRA-OP {
-    position:  relative;
-    float:  left;
-    margin: 30px 63px;
-}
-
-h1.nome-OBRA {
-    color:  white;
-    font-family:  roboto_regular;
-    margin: 16px 0px;
-}
-
-p.temporada {
-    color:  white;
-    font-weight:  1000;
-    font-family: roboto_bold;
-    margin:  12px 0;
-}
-
-p.sinopse-OBRA {
-    color: #ded2d2;
-    font-size: 13px;
-    font-family: roboto_regular;
-    margin: 12px 0;
-}
-
-.add-favorito {
-    float: left;
+  }
+  
+  .TEMPORADAS {
     position: relative;
-    font-size: 14px;
-    padding: 9px;
-    color: #e0e0e0;
-    border-radius: 2px;
-    border: 2px solid;
-}
-
-p.TITULO-OBRA {
+    /* transition: .3s; */
     float: left;
+    width: 100%;
+    min-width: 330px;
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background:rgba(66, 45, 45, 0.5);
+    box-shadow: 0px 0px 9px -1px #333;
+  }
+  
+  .ICO {
+      color: #cccbcb;
+      cursor: pointer;
+      position: relative;
+      background: #444343;
+      font-size: 13px;
+      border-radius: 2px;
+      font-family: arial;
+      padding: 12px;
+      margin: 8px;
+      margin-bottom:  0;
+  }
+  
+  p.SUBICO {
+      position: relative;
+      float: right;
+      padding: 9px 10px;
+      background: #444343;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      margin: 8px 4px;
+      cursor: pointer;
+      border-radius: 50%;
+      color: #7d7a7a;
+      margin-bottom:  0;
+      margin-right:  0;
+  }
+  p.SUBICO:hover {
+      background: #444343;
+      color: #9c9999;
+  }
+  
+  .DIA {
+      float: right;
+  }
+  .TP {
+      float: left;
+  }
+  .TA {
+      float: left;
+  }
+  .INP-Controll{
+    position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      width:100%;
+      cursor:pointer;
+      bottom:0;
+      opacity:0;
+  }
+  .titulo-controle {
+      background: #fb4d26;
+      position: relative;
+      width: 100%;
+      min-height: 57px;
+      /* border-bottom: 3px solid #333; */
+      float: left;
+  }
+  .title-barra{
+      position: relative;
+      float: left;
+      font-size: 16px;
+      color: #454545;
+      font-family: roboto_regular;
+      margin: 0;
+      padding: 20px;
+  }
+  .SLIDE-HORIZONTAL {
+      overflow-x: hidden;
+      position: relative;
+      transition: .59s;
+      clear: both;
+      float: left;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      background: #3e3d3d;
+  }
+  
+  .TT {
+      padding: 0 6px;
+      padding-left: 0;
+      width: 100%;
+      float: left;
+      position: relative;
+      /* border-top: 3px solid #333; */
+      margin: 0;
+      max-height: 624px;
+      display: grid;
+      overflow-y: auto;
+      grid-column-gap: 6px;
+      grid-row-gap:  6px;
+      grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+      padding:  6px;
+  }
+  .SIDEBAR {
+      width: 334px;
+      float: right;
+      box-shadow: 1px 2px 5px 2px #151414;
+      overflow: hidden;
+      border-radius: 4px;
+      position: relative;
+      background: #1d1c1c;
+      top: 0px;
+      padding-bottom: 49px;
+  }
+  .baner-anime {
+      width: 86%;
+      position: relative;
+      margin: 2% 6%;
+      height: auto;
+  }
+  .baner-anime img {
+    width: 100%;
+    float: left;
+  }
+  .baner-nome {
+      position: relative;
+      width: calc(100% - 20px);
+      height: auto;
+      float: left;
+      padding: 0 10px;
+      margin: 53px 0px 15px 0px;
+  }
+  .NOME-side {
+      margin: 0;
+      position: relative;
+      top: 50%;
+      font-size: 20px;
+      font-family: arial;
+      font-weight: bold;
+      color: #f10a0a;
+      transform: translateY(-50%);
+  }
+  
+  .infosub {
+      color: #999595;
+      font-family: arial;
+      font-size: 13px;
+      margin: 10px 0;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 11;
+  }
+  
+  .EP {
+      position: relative;
+      float: left;
+      border-radius: 4px;
+      width: 100%;
+      height: 207px;
+      overflow: hidden;
+      border: 0px solid;
+      box-shadow: 1px 2px 5px 2px rgba(37, 36, 36, 0.89);
+  }
+  .THUMB {
+      /* width: 100%; */
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: .2s;
+      left: 50%;
+      transform: translateX(-50%);
+      image-rendering: -webkit-optimize-contrast;
+  }
+  .EP:hover .THUMB {
+      /* width: 109%; */
+  }
+  
+  .temporadaINFO {
+      position: absolute;
+      z-index: 1;
+      font-size: 11px;
+      background: rgb(33, 32, 32);
+      top: 4%;
+      display: none;
+      right: 3%;
+      color: white;
+      padding: 3px;
+      border: 1px solid white;
+      font-family: Verdan;
+  }
+  
+  .EP:hover .temporadaINFO {
+    display: block;
+  }
+  .tempo {
+      position: absolute;
+      left: 0%;
+      background-color: rgba(53, 51, 50, 0.88);
+      border-radius: 2px;
+      z-index: 1;
+      width: auto;
+      font-size: 11px;
+      color: white;
+      margin: 7px;
+      padding: 5px 2px;
+  }
+  .final {
+    position: absolute;
+    z-index: 1;
     margin: 0;
-    margin-right: 16px;
-    font-size: 33px;
-    color: #43c3ef;
-    font-family: roboto_regular;
+    font-size: 10px;
+    left: 50px;
+    padding: 6px 3px;
+    color: black;
+    background: #ff4800;
+    margin-top: 6px;
+    border-radius: 2px;
+  }
+  
+  .identifica {
+      position: absolute;
+      bottom: 0%;
+      width: 78%;
+      z-index: 400;
+      padding: 12px 12px;
+      margin: 0;
+      background: linear-gradient(40deg, rgba(60, 60, 60, 0.7),transparent 100%);
+      /* min-height: 85px; */
+      transition: .3s;
+  }
+  .logo-anime {
+      max-width: 67px;
+      max-height: 67px;
+      float: left;
+  }
+  .link-logo {
+      position: absolute;
+      bottom: 104%;
+      left: 1%;
+      padding: 6px;
+      border-radius: 4px;
+  }
+  .link-logo:hover {
+    background: rgba(0,0,0,0.4);
+  }
+  .anime {
+      font-size: 15px;
+      white-space: initial;
+      color: white;
+      float: left;
+      text-shadow: 1px 1px 2px #000;
+      width: 100%;
+      margin: 0;
+      font-family: roboto_regular;
+  }
+  .episodio {
+      float: left;
+      clear: both;
+      width: 100%;
+      position: relative;
+      text-shadow: 1px 1px 2px #000;
+      margin: 0;
+      font-family: roboto_regular;
+      font-size: 11px;
+      color: rgba(0, 255, 210, 0.86);
+      margin: 3px 0;
+  }
+  
+  .nomeEP {
+    float: left;
+    color: #d6d2d2;
+    font-size: 11px;
+    margin: 6px 0;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .EP:hover .nomeEP {
+  }
+  
+  .Obras {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      float: left;
+      background: #1b1a1a;
+      box-shadow: 0px -1px 7px #000;
+  }
+  .OBRAS-add {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    float: left;
+  }
+  .ANIMES {
+    position: relative;
+    width: 100%;
+    float: left;
+    border-top: 6px solid #333;
+    height: auto;
+  }
+  .ANIMACOES {
+    position: relative;
+    width: 100%;
+    margin: 80px 0px;
+    height: 494px;
+    clear:  both;
+    /* overflow-y: hidden; */
+    float:  left;
+    background: #141313;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 9px 1px #1b1a1a;
+  }
+  .middle {
+    top: 50%;
+      transform: translateY(-50%);
+      position: relative;
+  }
+  .right { right: 0%;}
+  .left  { left: 0%;}
+  .btn-slide {
+      position: absolute;
+      width: 30px;
+      background: red;
+      z-index: 40;
+      text-align: center;
+      top: calc(50% - 40px);
+      height: 100px;
+  }
+  p.title {
+      float: left;
+      color: #292626;
+      font-size: 28px;
+      font-family: roboto_bold;
+      margin: 0;
+      padding: 12px;
+      letter-spacing: -1px;
+      position: relative;
+      z-index:  20;
+  }
+  span.ENFASE {
+      font-weight: bold;
+      border-bottom: 3px solid red;
+  }
+  ul.Lista-OBRAS {
+      white-space: nowrap;
+      position: relative;
+      bottom: 2%;
+      transition: .59s;
+      overflow: auto;
+      clear: both;
+      float: left;
+      left: 0;
+      margin: 0;
+      width: auto;
+  }
+  .Lista-OBRAS::-webkit-scrollbar {
+      background-color: rgba(49, 47, 47, 0.96);
+      position: relative;
+      display: none;
+      width: 11px;
+      height: 11px;
+  }
+  
+  .Lista-OBRAS::-webkit-scrollbar-thumb {
+      position: relative;
+      float: right;
+      background: red;
+  }
+  
+  .ANIME-OBRA {
+      width: 300px;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      border-radius: 5px;
+      margin:  2px;
+  }
+  .ANIME-OBRA img {
+      width: 100%;
+      position: relative;
+      top: -50%;
+      float: left;
+  }
+  .INFO-ANIME {
+      background: rgba(0, 0, 0, 0.03);
+      position: absolute;
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .LINK-ANIMEE {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ANIME-OBRA:hover .INFO-ANIME{
+    opacity: 1;
+  }
+  .NOME-ANIME {
+      position: relative;
+      margin: 0;
+      font-family: roboto_regular;
+      float: left;
+      font-size: 14px;
+      color: white;
+      white-space: initial;
+      padding: 0;
+  }
+  .generos-add {
+      font-family: roboto_regular;
+      font-size: 11px;
+      float: left;
+      clear: both;
+      color: red;
+      white-space: initial;
+      margin: 0;
+      padding: 0;
+  }
+  .Jumento-Cavalinho {
+      position: absolute;
+      padding: 12px 20px;
+      width: calc(100% - 40px);
+      background: rgba(27, 26, 26, 0.93);
+      float:  left;
+      bottom:  0%;
+  }
+  
+  
+  .show-OBRA {
+      position:  relative;
+      float:  left;
+      width:  100%;
+      height: auto;
+      background-size:  cover;
+      margin-bottom: 6px;
+      box-shadow: 1px 1px 16px #000;
+  }
+  
+  ul.OBRAS-lista {
+      position:  relative;
+      width:  100%;
+      float:  left;
+      height: auto;
+      padding:  0;
+      margin:  0;
+  }
+  
+  .OBRA-show {
+      position: relative;
+      float:  left;
+      width:  100%;
+      height: 470px;
+      background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/back-MP100.png);
+      background-size: cover;
+  }
+  
+  .sombra {
+      position:  relative;
+      float:  left;
+      width: 100%;
+      height:  100%;
+      background: rgba(0, 0, 0, 0.27);
+  }
+  
+  .CENTER-sombra {
+      position: relative;
+      left: 50%;
+      float: left;
+      transform: translateX(-50%);
+      width: 96%;
+      height: 100%;
+      max-width: 1378px;
+  }
+  
+  .info-OBRA {
+      position:  relative;
+      float:  left;
+      width: 33%;
+      height: 100%;
+      background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/MP100.jpg);
+      background-size:  100%;
+      margin-left: 30px;
+      box-shadow: 1px 1px 8px #0009;
+      padding-top: 300px;
+      z-index:  30;
+  }
+  
+  .info-OBRA-plus {
+      position:  relative;
+      float: left;
+      width: 55%;
+      height:  100%;
+      left: 31px;
+      background: rgba(33, 33, 33, 0.95);
+  }
+  
+  .info-OBRA-OP {
+      position:  relative;
+      float:  left;
+      margin: 30px 63px;
+  }
+  
+  h1.nome-OBRA {
+      color:  white;
+      font-family:  roboto_regular;
+      margin: 16px 0px;
+  }
+  
+  p.temporada {
+      color:  white;
+      font-weight:  1000;
+      font-family: roboto_bold;
+      margin:  12px 0;
+  }
+  
+  p.sinopse-OBRA {
+      color: #ded2d2;
+      font-size: 13px;
+      font-family: roboto_regular;
+      margin: 12px 0;
+  }
+  
+  .add-favorito {
+      float: left;
+      position: relative;
+      font-size: 14px;
+      padding: 9px;
+      color: #e0e0e0;
+      border-radius: 2px;
+      border: 2px solid;
+  }
+  
+  p.TITULO-OBRA {
+      float: left;
+      margin: 0;
+      margin-right: 16px;
+      font-size: 33px;
+      color: #43c3ef;
+      font-family: roboto_regular;
+  }
+  
+  .ABAS {
+      position: absolute;
+      float:  left;
+      width:  100%;
+      padding-left: 39%;
+      bottom: 0%;
+      z-index:  20;
+      background: #1b1a1a;
+  }
+  
+  p.OP-ABA {
+      float:  left;
+      font-size: 14px;
+      color: #43c3ef;
+      font-family:  roboto_bold;
+      margin: 0;
+      padding: 12px;
+      border-bottom: 3px solid #43c3ef;
+  }
+  
+  .idade {
+      background: #fd3232;
+      padding: 3px;
+      border-radius: 2px;
+      font-size: 13px;
+  }
+  
+  .EP:hover .anime {
+      color: white;
+  }
+      
+
+p.OpcaoGuia {
+    position:  relative;
+    float:  left;
+    padding: 12px 20px;
+    border-radius: 3px;
+    background: #1b1a1a;
+    transform: skew(-24deg);
+    margin:  0px 2px;
 }
 
-.ABAS {
+.GuiaDeNavegacao {
     position: absolute;
+    top: -45px;
+    left: 11.2px;
+}
+
+.Capsula {
+    position:  relative;
+    width: 300px;
+    height:  400px;
+    background: #1d1c1c;
+    border-radius:  3px;
+    margin:  0 2px;
+    display: inline-block;
+}
+
+ul.ListaANIMACOES {
+    position:  relative;
+    float: left;
+    padding: 48px;
+    width: 100%;
+    overflow: auto;
+    height: 515px;
+    user-select:  none;
+    overflow-y:  hidden;
+    box-sizing:  border-box;
+    display:  inline-block;
+    white-space:  nowrap;
+}
+
+span.OP-span {
+    font-family:  roboto_regular;
+    position:  relative;
+    float:  left;
+    transform:  skew(24deg);
+}
+
+.ESCONDE-SCROLLS {
+    height:  100%;
+    position:  relative;
     float:  left;
     width:  100%;
-    padding-left: 39%;
-    bottom: 0%;
-    z-index:  20;
-    background: #1b1a1a;
+    overflow:  hidden;
 }
-
-p.OP-ABA {
-    float:  left;
-    font-size: 14px;
-    color: #43c3ef;
-    font-family:  roboto_bold;
-    margin: 0;
-    padding: 12px;
-    border-bottom: 3px solid #43c3ef;
-}
-
-.idade {
-    background: #fd3232;
-    padding: 3px;
-    border-radius: 2px;
-    font-size: 13px;
-}
-
-.EP:hover .anime {
-    color: white;
-}
-	

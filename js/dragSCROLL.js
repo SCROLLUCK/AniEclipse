@@ -5,8 +5,7 @@ $(function(){
   $(" #LISTA ").mousemove(function(m){
     if(curDown === true){
 
-    // $( this ).scrollLeft($(this).scrollLeft() + (curXPos - m.pageX));
-    $( this ).scrollLeft((curXPos - m.pageX));
+    $( this ).scrollLeft(  ($(this).scrollLeft() + (curXPos - m.pageX))*0.4 );
     }
   });
   

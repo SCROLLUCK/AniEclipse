@@ -54,8 +54,8 @@ function temporadaAtual() {
                         html += "</a>";
                         html += "<a href='"+UltimosEps[contador].Diretorio+"/"+UltimosEps[contador].NomeArquivo+"'>";
                         html += "<p class='episodio'>EPISODIO "+UltimosEps[contador].Numero+"</p>";
-                        html += "<p class='anime'>"+UltimosEps[contador].Obra+"</p>";
-                        html += "<p class='nomeEP'>EPISODIO "+UltimosEps[contador].Nome+"</p>";
+                        html += "<p class='anime'>"+UltimosEps[contador].Obra.toUpperCase()+"</p>";
+                        html += "<p class='nomeEP'>"+UltimosEps[contador].Nome.toUpperCase()+"</p>";
                         html += "</a>";
                         html += "</div>";
                         html += "</div>";

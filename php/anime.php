@@ -1,10 +1,6 @@
 <?php
-
-  $target="anime.php";
-  if(basename($_SERVER["PHP_SELF"])== $target){
-    die("<meta charset='utf-8'><title></title><script>window.location=('index.php')</script>");
-  }
   
+  include("conexaoAnieDB.php");
   include("obra.php");
   
   class Anime extends Obra{
@@ -17,6 +13,18 @@
         $this->$campo = $valor;
     }
     
+  }
+
+   if($_GET['pegaAnime']=="todos"){
+    $resultAnimes = $mysqli->query("SELECT * FROM obras WHERE animacao = 0 ORDER BY nome");
+
+    while($linhaAnimes = $resultAnimes->fetch_assoc()){
+        $NovoAnime = new Anime($linhaAnimes['nome'],$linhaAnimes['episodios'],$linhaAnimes['temporadas'],$linhaAnimes['estreia'],$linhaAnimes['estudio'],$linhaAnimes['autor'],"",$linhaAnimes['background'],$linhaAnimes['capa'],$linhaAnimes['diretorio'],$linhaAnimes['lancamento'],$linhaAnimes['status']);
+        $NovoAnime->Sinopse = $linhaAnimes['sinopse'];
+        $ListaAnimes[] = $NovoAnime; 
+    }
+
+    echo json_encode($ListaAnimes);
   }
 
 ?>

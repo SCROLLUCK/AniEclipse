@@ -26,9 +26,9 @@
 
 						<div class="white-space"></div>
 
-						<a class="link-pagina" href="../../../animes"><i class="fa fa-th-list"></i> Animes</a>
+						<a class="link-pagina" href="../../../obras?show=animes"><i class="fa fa-th-list"></i> Animes</a>
 
-						<a class="link-pagina" href="../../../animacoes"><i class="fa fa-rocket"></i> Animações</a>
+						<a class="link-pagina" href="../../../obras?show=animacoes"><i class="fa fa-rocket"></i> Animações</a>
 
 				                <a class="link-pagina" href="../../../animes?lancamentos=ok"><i class="fa fa-desktop"></i> Lançamentos</a>
 

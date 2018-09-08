@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <header>
 <div class="header-interno">
 
@@ -30,8 +32,6 @@
 
 						<a class="link-pagina" href="../../../obras?show=animacoes"><i class="fa fa-rocket"></i> Animações</a>
 
-				                <a class="link-pagina" href="../../../animes?lancamentos=ok"><i class="fa fa-desktop"></i> Lançamentos</a>
-
 						<li class="link-pagina generos">
 
 							<i class="fa fa-tags"></i> Gêneros <i class="fa fa-caret-down"></i>
@@ -56,7 +56,26 @@
 
 			</nav>
 			<div class="interacao-user">
+				<?php
+					if(!isset($_SESSION['UsuarioLogado'])){
+				?>
 			    <a id="logg" class="titulo-Opcao" title="Entrar com uma conta" href="login.php" style="float: right;"><i class="fa fa-sign-in-alt"></i> Logar</a>
+			    <?php
+			    	}else {
+			    		$UsuarioLogado = unserialize($_SESSION['UsuarioLogado']);
+			    ?>
+			    <a href="?exit" class="titulo-Opcao" title="Sair" style="float: right;">Logout <i class="fa fa-sign-out"></i></a>
+
+				<a href="../../../perfil.php?id=<?=$UsuarioLogado->ID?>" title="<?=$UsuarioLogado->Nickname?>" class="link-perfil">
+
+					<div class="PERFIL-user" style="background: url(../../../img/users/<?=$UsuarioLogado->Perfil?>); background-size: cover; background-position-x:center;"></div>
+
+					<h2 class="NOME-user"><?=$UsuarioLogado->Nickname?></h2>
+
+				</a>
+			    <?php
+					}
+			    ?>
 			</div>
                      </div>
         </div>

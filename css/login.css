@@ -127,6 +127,8 @@ position: relative;
 .cont_btn {
   position: relative;
   float: left;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .btn_sign {
@@ -139,7 +141,6 @@ position: relative;
   font-size: 14px;
   position: relative;
   float: left;
-  margin-left: 100px;
   margin-top: 20px;
   margin-bottom: 20px;
   cursor: pointer;

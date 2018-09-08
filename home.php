@@ -22,6 +22,7 @@
 
 	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;" onload="main();">
 		<?php
+			include("php/usuario.php");
 			include("menu.php");
 		?>
 		<div class="sub" onclick="LimpaBuffer();">
@@ -29,9 +30,6 @@
 		<div class="CENTER">
 			<div class="TEMPORADAS">
 				<div class="titulo-controle">
-
-					<p class="ICO TP" onclick="exibe(0,1);" >TP <input type="button" title="TEMPORADA PASSADA" value="passada" class="INP-Controll"/></p>
-					<p class="ICO TA" onclick="exibe(1,1);" style="display: none;">TA <input type="button" title="TEMPORADA ATUAL" value="atual" class="INP-Controll"/></p>
 					<p class="ICO DIA" onclick="exibe(2,1);">Todos <input type="button" value="hoje" class="INP-Controll"/></p>
 					<p class="SUBICO" onclick="exibe(3,1);">
 						<input type="button" title="ANIMAÇÕES" value="animacoes" class="INP-Controll"/>

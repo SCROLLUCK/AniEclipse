@@ -19,7 +19,8 @@
 	</head>
 
 	<body onload="exibeAnimes('<?=$_GET['show']?>');">
-    <?php 
+    <?php
+      include("../php/usuario.php");
       include ("../menu.php");
     ?>
           

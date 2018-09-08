@@ -245,6 +245,7 @@
       overflow-y: auto;
       font-size: 13px;
       margin-top: 8px;
+      white-space: initial;
   }
   
   .Anime:hover .nome-anime {

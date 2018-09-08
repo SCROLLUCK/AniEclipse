@@ -21,23 +21,24 @@ function CriaRequest() {
          return request;
 }
 
-function temporadaAtual() {
+function main() {
     var contentBox = document.getElementById("box");
+    var contentLISTA = document.getElementById("LISTA");
 
     if(contentBox != null){
-        var xmlreq = CriaRequest();
+        var xmlreq1 = CriaRequest();
         var UltimosEps;
         var contador = 0;
             
-        xmlreq.open("GET","php/episodio.php?temporada=atual",true);
+        xmlreq1.open("GET","php/episodio.php?temporada=atual",true);
             
-        xmlreq.onreadystatechange = function(){
+        xmlreq1.onreadystatechange = function(){
                   
-            if (xmlreq.readyState == 4) {
+            if (xmlreq1.readyState == 4) {
                       
-                if (xmlreq.status == 200) {
+                if (xmlreq1.status == 200) {
 
-                    UltimosEps = JSON.parse(xmlreq.responseText);
+                    UltimosEps = JSON.parse(xmlreq1.responseText);
 
                     html = "<ul id='TEMPORADA-ATUAL' class='TT'>";
                     
@@ -55,7 +56,7 @@ function temporadaAtual() {
                         html += "<a href='"+UltimosEps[contador].Diretorio+"/episodio.php?ep="+UltimosEps[contador].Numero+"'>";
                         html += "<p class='episodio'>EPISODIO "+UltimosEps[contador].Numero+"</p>";
                         html += "<p class='anime'>"+UltimosEps[contador].Obra.toUpperCase()+"</p>";
-                        html += "<p class='nomeEP'>"+UltimosEps[contador].Nome.toUpperCase()+"</p>";
+                        html += "<p class='nomeEP'>"+UltimosEps[contador].Nome+"</p>";
                         html += "</a>";
                         html += "</div>";
                         html += "</div>";
@@ -68,10 +69,55 @@ function temporadaAtual() {
                     contentBox.innerHTML = html;
 
                 }else{
-                    contentBox.innerHTML = "Erro: " + xmlreq.statusText;
+                    contentBox.innerHTML = "Erro: " + xmlreq1.statusText;
                 }
             }
         };
-        xmlreq.send(null);
+        xmlreq1.send(null);
+    }
+
+    if(contentLISTA != null){
+        var xmlreq2 = CriaRequest();
+        var ListaObras;
+        var contador = 0;
+
+        xmlreq2.open("GET","php/anime.php?pegaAnime=recentes",true);
+
+        xmlreq2.onreadystatechange = function(){
+            if(xmlreq2.readyState == 4){
+                if(xmlreq2.status == 200){
+
+                    ListaObras = JSON.parse(xmlreq2.responseText);
+
+                    html = "";
+                    
+                    while(contador < ListaObras.length){
+                        html += "<div class='Capsula'>";
+                        html += "<div class='Anime'>";
+                        html += "<div class='thumb-episodio' style='background: #1b1a1a url(../"+ListaObras[contador].Diretorio+"/img/"+ListaObras[contador].Capa+"); background-size: cover; background-position: center;'>";
+                        html += "<div class='Info-anime'>";
+                        html += "<p class='nome-anime'>"+ListaObras[contador].Nome+"</p>";
+                        html += "<p class='info'><span class='name-info'>Lançamento: </span>"+ListaObras[contador].DataLancamento+"</p>";
+                        html += "<p class='info'><span class='name-info'>Roteirista: </span>"+ListaObras[contador].Roteirista+"</p>";
+                        html += "<p class='info'><span class='name-info'>Estudio: </span>"+ListaObras[contador].Estudio+"</p>";
+                        html += "<p class='info'><span class='name-info'>Status: </span>"+ListaObras[contador].Status+"</p>";
+                        html += "<p class='info' style='width:100%;'><span class='name-info'>Episódios: </span>"+ListaObras[contador].Episodios+" <a class='link-anime' href='../"+ListaObras[contador].Diretorio+"'>Assista Agora!</a></p>";
+                        html += "<p class='Sinopse'>"+ListaObras[contador].Sinopse+"</p>";
+                        html += "</div>";
+                        html += "</div>";
+                        html += "</div>";
+                        html += "</div>";
+
+                        contador = contador + 1;
+                    }
+                    
+                    contentLISTA.innerHTML = html;
+
+                }else {
+                    contentLISTA.innerHTML = "Erro: "+xmlreq2.statusText;
+                }
+            }
+        };
+        xmlreq2.send(null);
     }
 }

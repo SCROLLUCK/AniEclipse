@@ -6,7 +6,8 @@
 		<title> Ani Eclipse - Dimensão Otaku </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-                <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+		<link rel="stylesheet" type="text/css" href="css/teste.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
 		<link rel="stylesheet" type="text/css" href="css/home.css" />
 		<link rel="stylesheet" href="css/home-mobile.css" media="(max-width: 480px)"/>
       	<link rel="stylesheet" type="text/css" href="css/menu.css" />
@@ -19,7 +20,7 @@
 		<script type="text/javascript" src="js/dragSCROLL.js"></script>
 	</head>
 
-	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;" onload="temporadaAtual();">
+	<body class="body parallax" data-speed="6" style="background-position: 50% 0px;" onload="main();">
 		<?php
 			include("menu.php");
 		?>
@@ -67,47 +68,14 @@
 	</div>
 		
 	</div>
-	<div class="Obras">
-		<div class="OBRAS-add">
-			<div class="ANIMES">
-				<div class="show-OBRA">
-				    <ul class="OBRAS-lista" id="LISTA" data-hover="false">
-				              
-					    <div class="OBRA-show" style="background: url(DiretorioDOBackground); background-size: cover;">
-					    <div class="sombra">
-					       <div class="CENTER-sombra">
-					    	<div class="ABAS">
-								<p class="OP-ABA">VISÃO GERAL</p>
-								<p class="OP-ABA">TRAILLER</p>
-							    <p class="OP-ABA">EPISODIOS</p>
-							    <p class="OP-ABA">ANIMES SEMELHANTES</p>         
-							</div>
-						    <div class="info-OBRA parallax" data-speed="6" style="background-position: 50% -160.333px; background: url(DiretorioDaCApaDoAnime); background-size: 100%;"></div>
-						    <div class="info-OBRA-plus">
-							    <div class="info-OBRA-OP">
-							    <h1 class="nome-OBRA"><p class="TITULO-OBRA">ANIME </p> Nome do Anime</h1>
-							    <p class="temporada">2019 (numeroDatemporada 2)ª Temporada <span class="idade"> 17</span></p>
-							    <p class="sinopse-OBRA">Sinopse do anime</p>
-							    <a href="diretorioDoAnime" class="add-favorito"> <i class="fas fa-tv" aria-hidden="true"></i> Assistir! </a>
-							</div>
-							</div>
-						  </div>
-						</div>
-					</div>
-				</ul>
-					<script>slideOBRAS();</script>
-				</div>
-			</div>
-		</div>
-	</div>
 		<script>loop();</script>
 
 	<div class="ANIMACOES">
     <div class="GuiaDeNavegacao">
 		<p class="OpcaoGuia"><span class="OP-span">Lançamentos</span></p>
 		<p class="OpcaoGuia"><span class="OP-span">Adicionados</span></p>
-		<p class="OpcaoGuia"><span class="OP-span">Mais Avaliados</span></p>
-		<p class="OpcaoGuia"><span class="OP-span">Animções</span></p>
+		<p class="OpcaoGuia"><span class="OP-span">Mais Vistos</span></p>
+		<p class="OpcaoGuia"><span class="OP-span">Animações</span></p>
 	</div>
 		<div class="ESCONDE-SCROLLS">
 		<ul class="ListaANIMACOES" id="LISTA">

@@ -47,11 +47,11 @@ function main() {
                         html += "<p class='tempo'>"+UltimosEps[contador].Duracao+"</p>";
                         //html += "<p class='final'>"+UltimosEps[contador].Final+"</p>";
                         html += "<a href='"+UltimosEps[contador].Diretorio+"/episodio.php?ep="+UltimosEps[contador].Numero+"' title='"+UltimosEps[contador].Nome+"'>";
-                        html += "<img class='THUMB' src='"+UltimosEps[contador].Diretorio+"/"+UltimosEps[contador].Thumb+"'>";
+                        html += "<img class='THUMB' src='"+UltimosEps[contador].Diretorio+"/img/"+UltimosEps[contador].Thumb+"'>";
                         html += "</a>";
                         html += "<div class='identifica'>";
                         html += "<a class='link-logo' href='"+UltimosEps[contador].Diretorio+"' title='"+UltimosEps[contador].Obra+"'>";
-                        html += "<img class='logo-anime' src='"+UltimosEps[contador].Diretorio+"img/logo.png'>";
+                        html += "<img class='logo-anime' src='"+UltimosEps[contador].Diretorio+"/img/logo.png'>";
                         html += "</a>";
                         html += "<a href='"+UltimosEps[contador].Diretorio+"/episodio.php?ep="+UltimosEps[contador].Numero+"'>";
                         html += "<p class='episodio'>EPISODIO "+UltimosEps[contador].Numero+"</p>";

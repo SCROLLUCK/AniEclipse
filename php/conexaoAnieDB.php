@@ -10,7 +10,7 @@
   global $usuario;
   $usuario = "root";
   global $senha;
-  $senha = "281295";
+  $senha = "starred1234";
   global $banco;
   $banco = "aniedb";
 

@@ -12,17 +12,17 @@ Some prevs of Home Page, Animes Page, Info Anime, Episodes of Anime
 
 Home Page
 
-![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/animes/mob-psycho-100/img/prev/home.png?raw=true)
+![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/home.png?raw=true)
 
 Animes Page
 
-![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/animes/mob-psycho-100/img/prev/animes.png?raw=true)
+![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/animes.png?raw=true)
 
 Info Anime
 
-![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/animes/mob-psycho-100/img/prev/infoanime.png?raw=true)
+![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/infoanime.png?raw=true)
 
 Episodes
 
-![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/animes/mob-psycho-100/img/prev/infoanime.png?raw=true)
+![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/infoanime.png?raw=true)
 

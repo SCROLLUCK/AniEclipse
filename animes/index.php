@@ -30,6 +30,7 @@
 	<!--LIB AXIOS-->
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="http://localhost:8080/js/main.js"></script>
+	<script src="http://localhost:8080/js/animesAjax.js"></script>
 	<script type="text/javascript" src="http://localhost:8080/controllers/animes.php"></script>
 </body>
 </html>

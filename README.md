@@ -24,5 +24,5 @@ Info Anime
 
 Episodes
 
-![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/infoanime.png?raw=true)
+![alt text](https://github.com/SCROLLUCK/AnieEclipse/blob/master/img/prev/episodes.png?raw=true)
 

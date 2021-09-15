@@ -1,33 +1,4 @@
-@font-face {
-    font-family: "Verdan";
-    src: url("../fontes/verdana.ttf");
-  }
-  @font-face {
-    font-family: "roboto";
-    src: url("../fontes/Roboto.ttf");
-  }
-  @font-face {
-    font-family: "roboto_light";
-    src: url("../fontes/Roboto-Light.ttf");
-  }
-  @font-face {
-    font-family: "roboto_medium";
-    src: url("../fontes/Roboto-Medium.ttf");
-  }
-  @font-face {
-    font-family: "roboto_regular";
-    src: url("../fontes/Roboto-Regular.ttf");
-  }
-  @font-face {
-    font-family: "roboto_bold";
-    src: url("../fontes/Roboto-Bold.ttf");
-  }
-  @font-face {
-    font-family: "roboto_black";
-    src: url("../fontes/Roboto-Black.ttf");
-  }
-  
-  .body {
+.body {
     width: 100%;
     user-select: none;
     height: auto;
@@ -35,7 +6,7 @@
     float: left;
     margin: 0;
     padding: 0;
-    background: url(../../../img/shinmai.jpg);
+    background: url(../../img/shinmai.jpg);
   }
   .parallax {
       margin: 0 auto;
@@ -50,8 +21,10 @@
       height: auto;
       position: relative;
       float: left;
+      min-height: 600px;
       padding: 126px 0;
-      background: rgba(0, 0, 0, 0.16);
+      background: repeating-linear-gradient(45deg,#191818d6 0%, #191818d6 20%, #0e0e0ed6 20%, #0e0e0ed6 45%,#191818d6 45%, #191818d6 50%);
+      background-size: 50px 50px;
   }
   
   .noticias {
@@ -75,12 +48,11 @@
   }
   
   .CENTER {
-    width: auto;
     position: relative;
     left: 50%;
     float: left;
     transform: translateX(-50%);
-    width: 96%;
+    width: 94%;
   }
   
   .TEMPORADAS {
@@ -91,36 +63,35 @@
     min-width: 330px;
     height: auto;
     border-radius: 4px;
-    overflow: hidden;
-    background:rgba(66, 45, 45, 0.5);
-    box-shadow: 0px 0px 9px -1px #333;
   }
   
   .ICO {
-      color: #cccbcb;
+      color: #f5f5f5;
       cursor: pointer;
       position: relative;
-      background: #444343;
-      font-size: 13px;
-      border-radius: 2px;
-      font-family: arial;
+      background: #f44336;
+      font-size: 14px;
+      border-radius: 4px;
+      font-family: 'Roboto';
       padding: 12px;
-      margin: 8px;
-      margin-bottom:  0;
+      margin: 0px;
+      margin-right: 5px;
+      margin-bottom: 0;
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.73);
   }
   
   p.SUBICO {
       position: relative;
       float: right;
       padding: 9px 10px;
-      background: #444343;
+      background: #fb4d26;
       font-size: 20px;
       width: 40px;
       height: 40px;
       margin: 8px 4px;
       cursor: pointer;
       border-radius: 50%;
-      color: #7d7a7a;
+      color: #4e4c4c;
       margin-bottom:  0;
       margin-right:  0;
   }
@@ -149,7 +120,6 @@
       opacity:0;
   }
   .titulo-controle {
-      background: #fb4d26;
       position: relative;
       width: 100%;
       min-height: 57px;
@@ -160,13 +130,11 @@
       position: relative;
       float: left;
       font-size: 16px;
-      color: #454545;
-      font-family: roboto_regular;
-      margin: 0;
-      padding: 20px;
+      color: #e8e8e8;
+      font-family: 'Roboto';
+      padding: 12px;
   }
   .SLIDE-HORIZONTAL {
-      overflow-x: hidden;
       position: relative;
       transition: .59s;
       clear: both;
@@ -174,7 +142,6 @@
       left: 0;
       margin: 0;
       width: 100%;
-      background: #3e3d3d;
   }
   
   .TT {
@@ -185,12 +152,10 @@
       position: relative;
       /* border-top: 3px solid #333; */
       margin: 0;
-      max-height: 624px;
       display: grid;
-      overflow-y: auto;
       grid-column-gap: 6px;
       grid-row-gap:  6px;
-      grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+      grid-template-columns: repeat(auto-fill,minmax(300px,auto));
       padding:  6px;
   }
   .SIDEBAR {
@@ -250,25 +215,30 @@
       float: left;
       border-radius: 4px;
       width: 100%;
-      height: 207px;
+      transition: .3s;
       overflow: hidden;
+      padding-bottom: 64%;
+      background: #141313;
       border: 0px solid;
-      box-shadow: 1px 2px 5px 2px rgba(37, 36, 36, 0.89);
+      box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.73);
   }
   .THUMB {
       /* width: 100%; */
       height: 100%;
       position: absolute;
-      top: 0;
-      transition: .2s;
+      top: 50%;
+      transition-duration: .7s;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%,-50%);
       image-rendering: -webkit-optimize-contrast;
   }
   .EP:hover .THUMB {
-      /* width: 109%; */
   }
-  
+
+  .LANCA:hover {
+      transform: scale(1.2);
+      z-index: 999;
+  }
   .temporadaINFO {
       position: absolute;
       z-index: 1;
@@ -280,35 +250,39 @@
       color: white;
       padding: 3px;
       border: 1px solid white;
-      font-family: Verdan;
+      font-family: arial;
   }
   
   .EP:hover .temporadaINFO {
     display: block;
   }
   .tempo {
+      font-weight: bold;
       position: absolute;
-      left: 0%;
+      right: 0%;
       background-color: rgba(53, 51, 50, 0.88);
       border-radius: 2px;
-      z-index: 1;
+      z-index: 2;
       width: auto;
-      font-size: 11px;
+      font-size: 12px;
       color: white;
-      margin: 7px;
-      padding: 5px 2px;
+      margin: 10px;
+      font-family: arial;
+      padding: 5px;
   }
   .final {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     margin: 0;
-    font-size: 10px;
-    left: 50px;
-    padding: 6px 3px;
-    color: black;
-    background: #ff4800;
-    margin-top: 6px;
+    font-size: 12px;
+    right: 55px;
+    padding: 5px;
+    color: #333333;
+    background: #f44336;
+    font-weight: bold;
+    margin-top: 10px;
     border-radius: 2px;
+    font-family: arial;
   }
   
   .identifica {
@@ -318,9 +292,11 @@
       z-index: 400;
       padding: 12px 12px;
       margin: 0;
-      background: linear-gradient(40deg, rgba(60, 60, 60, 0.7),transparent 100%);
       /* min-height: 85px; */
+      padding-top: 0px !important;
+      transform-origin: unset;
       transition: .3s;
+      transform: none;
   }
   .logo-anime {
       max-width: 67px;
@@ -338,14 +314,14 @@
     background: rgba(0,0,0,0.4);
   }
   .anime {
-      font-size: 15px;
+      font-size: 13px;
       white-space: initial;
       color: white;
       float: left;
       text-shadow: 1px 1px 2px #000;
       width: 100%;
       margin: 0;
-      font-family: roboto_regular;
+      font-family: 'Roboto';
   }
   .episodio {
       float: left;
@@ -354,10 +330,10 @@
       position: relative;
       text-shadow: 1px 1px 2px #000;
       margin: 0;
-      font-family: roboto_regular;
-      font-size: 11px;
-      color: rgba(0, 255, 210, 0.86);
+      font-family: 'Roboto';
+      color: #00ffd0;
       margin: 3px 0;
+      font-size: 11px;
   }
   
   .nomeEP {
@@ -396,13 +372,13 @@
     position: relative;
     width: 100%;
     margin: 0;
-    height: 559px;
+    height: 514px;
     clear:  both;
     /* overflow-y: hidden; */
     float:  left;
     background: #141313;
     box-sizing: border-box;
-    box-shadow: 1px 1px 9px 1px #1b1a1a;
+    box-shadow: 1px 1px 9px 1px #000000;
   }
   .middle {
     top: 50%;
@@ -424,7 +400,7 @@
       float: left;
       color: #292626;
       font-size: 28px;
-      font-family: roboto_bold;
+      font-family: 'Roboto';
       margin: 0;
       padding: 12px;
       letter-spacing: -1px;
@@ -460,68 +436,7 @@
       float: right;
       background: red;
   }
-  
-  .ANIME-OBRA {
-      width: 300px;
-      overflow: hidden;
-      position: relative;
-      display: inline-block;
-      border-radius: 5px;
-      margin:  2px;
-  }
-  .ANIME-OBRA img {
-      width: 100%;
-      position: relative;
-      top: -50%;
-      float: left;
-  }
-  .INFO-ANIME {
-      background: rgba(0, 0, 0, 0.03);
-      position: absolute;
-      opacity: 1;
-      width: 100%;
-      height: 100%;
-  }
-  
-  .LINK-ANIMEE {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .ANIME-OBRA:hover .INFO-ANIME{
-    opacity: 1;
-  }
-  .NOME-ANIME {
-      position: relative;
-      margin: 0;
-      font-family: roboto_regular;
-      float: left;
-      font-size: 14px;
-      color: white;
-      white-space: initial;
-      padding: 0;
-  }
-  .generos-add {
-      font-family: roboto_regular;
-      font-size: 11px;
-      float: left;
-      clear: both;
-      color: red;
-      white-space: initial;
-      margin: 0;
-      padding: 0;
-  }
-  .Jumento-Cavalinho {
-      position: absolute;
-      padding: 12px 20px;
-      width: calc(100% - 40px);
-      background: rgba(27, 26, 26, 0.93);
-      float:  left;
-      bottom:  0%;
-  }
-  
-  
+   
   .show-OBRA {
       position:  relative;
       float:  left;
@@ -546,7 +461,7 @@
       float:  left;
       width:  100%;
       height: 470px;
-      background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/back-MP100.png);
+      background: url(../../animes/mob-psycho-100/img/back-MP100.png);
       background-size: cover;
   }
   
@@ -573,7 +488,7 @@
       float:  left;
       width: 33%;
       height: 100%;
-      background: url(https://www.anieclipse.net/animes/mob-psycho-100/Imagens/MP100.jpg);
+      background: url(../../animes/mob-psycho-100/img/MP100.jpg);
       background-size:  100%;
       margin-left: 30px;
       box-shadow: 1px 1px 8px #0009;
@@ -598,21 +513,21 @@
   
   h1.nome-OBRA {
       color:  white;
-      font-family:  roboto_regular;
+      font-family:  'Roboto';
       margin: 16px 0px;
   }
   
   p.temporada {
       color:  white;
       font-weight:  1000;
-      font-family: roboto_bold;
+      font-family: 'Roboto';
       margin:  12px 0;
   }
   
   p.sinopse-OBRA {
       color: #ded2d2;
       font-size: 13px;
-      font-family: roboto_regular;
+      font-family: 'Roboto';
       margin: 12px 0;
   }
   
@@ -632,7 +547,7 @@
       margin-right: 16px;
       font-size: 33px;
       color: #43c3ef;
-      font-family: roboto_regular;
+      font-family: 'Roboto';
   }
   
   .ABAS {
@@ -649,7 +564,7 @@
       float:  left;
       font-size: 14px;
       color: #43c3ef;
-      font-family:  roboto_bold;
+      font-family:  'Roboto';
       margin: 0;
       padding: 12px;
       border-bottom: 3px solid #43c3ef;
@@ -668,25 +583,35 @@
       
 
 p.OpcaoGuia {
-    position:  relative;
-    float:  left;
-    padding: 12px 20px;
-    border-radius: 3px;
-    background: #1b1a1a;
-    transform: skew(-24deg);
-    margin:  0px 2px;
+    float: left;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    z-index: 2;
+    transform: skewX(-25deg);
+    margin: 0px 1px;
+    text-align: -webkit-center;
+    align-self: center;
+    padding: 12px;
+    background: rgb(28, 28, 28);
+    vertical-align: middle;
+    border-radius: 5px;
+    min-width: 91px;
+    border-left: 4px solid #f44336;
 }
 
 .GuiaDeNavegacao {
     position: absolute;
-    top: -45px;
+    top: -43px;
     left: 11.2px;
 }
 
 .Capsula {
     position:  relative;
-    width: 313px;
-    height: 457px;
+    width: 264px;
+    height: 100%;
     border-radius:  3px;
     margin:  0 2px;
     display: inline-block;
@@ -698,7 +623,7 @@ ul.ListaANIMACOES {
     padding: 48px;
     width: 100%;
     overflow: auto;
-    height: 578px;
+    height: auto;
     user-select:  none;
     overflow-y:  hidden;
     box-sizing:  border-box;
@@ -707,10 +632,11 @@ ul.ListaANIMACOES {
 }
 
 span.OP-span {
-    font-family:  roboto_regular;
+    font-family:  'Roboto';
     position:  relative;
     float:  left;
     transform:  skew(24deg);
+    color: #e4e4e4;
 }
 
 .ESCONDE-SCROLLS {
@@ -719,4 +645,63 @@ span.OP-span {
     float:  left;
     width:  100%;
     overflow:  hidden;
+}
+
+.LINK-ANIMEE {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 23;
+}
+
+.Anime:hover .LINK-ANIMEE {
+    display: none;
+    opacity: 0;
+}
+
+.Jumento-Cavalinho {
+    position: absolute;
+    bottom: 2%;
+    width: 80%;
+    transform: translateY(-50%);
+    white-space: initial;
+    padding: 23px 20px;
+    background: rgb(23, 23, 23);
+    box-shadow: 0 0px 4px #000c;
+    border-radius: 0px 3px 3px 0px;
+}
+.NOME-ANIME {
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+}
+.generos-add {
+    float: left;
+    clear: both;
+    white-space: initial;
+    padding: 0px;
+    text-shadow: 1px 1px 2px #000;
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: rgba(0, 255, 210, 0.86);
+}
+
+.ICO:active {
+    transform: scale(0.95);
+}
+
+a.LINK-EP {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(393deg, rgba(25, 25, 25, 0.67) 17%,transparent 100%);
+    z-index: 1;
+}
+span.dataPostagem {
+    position: relative;
+    font-size: 11px;
+    color: #e0e0e0;
 }

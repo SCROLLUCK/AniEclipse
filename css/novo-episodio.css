@@ -1,60 +1,32 @@
-@font-face {
-  font-family: "Verdan";
-  src: url("../fontes/verdana.ttf");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("../fontes/Roboto.ttf");
-}
-@font-face {
-  font-family: "roboto_light";
-  src: url("../fontes/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "roboto_medium";
-  src: url("../fontes/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: "roboto_regular";
-  src: url("../fontes/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "roboto_bold";
-  src: url("../fontes/Roboto-Bold.ttf");
-}
-@font-face {
-  font-family: "roboto_black";
-  src: url("../fontes/Roboto-Black.ttf");
-}
-
 .CENTER {
-	margin-top: 115px;
-	width: 96%;
-	position: relative;
-	max-width: 1400px;
-	float: left;
-	left: 50%;
-	margin-bottom: 60px;
-	transform: translateX(-50%);
+    width: 94% !important;
+    margin: 3% !important;
+    position: relative !important;
+    float: left !important;
+    transform: none !important;
+    left: initial !important;
 }
 
 .INFO-EPISODIO {
 	width: 365px;
-    height: 400px;
-    float: right;
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
-    background: #232323;
+	height: auto;
+	float: right;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	background: #232323;
+	box-shadow: 0px 0px 13px -4px black;
 }
 
 .SUB {
     position: relative;
     float: left;
     width: 100%;
-    background: rgba(0, 0, 0, 0.53);
+    background: rgba(0, 0, 0, 0.76);
     height: auto;
     min-height: 100%;
+    box-sizing: border-box;
+    padding-top: 55px;
 }
 
 .CONT-EPISODIO {
@@ -63,18 +35,19 @@
     background:  #333;
     height:  auto;
     z-index: 1;
-    border-top: 4px solid #333;
 }
 
 h2.NAME-ANIME {
     font-size: 18px;
     color: white;
-    font-family: roboto_regular;
+    font-family: 'Roboto';
     margin: 0;
+    top: -120px;
     left:  0%;
     position: absolute;
     z-index: 40;
     width:  100%;
+    transition: .1s;
     height: 106px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.68);
     padding: 23px;
@@ -85,17 +58,16 @@ p.NAME-EPISODIO {
     color: #fb4d26;
     padding: 0;
     font-size: 17px;
-    font-family: roboto_bold;
+    font-family: 'Roboto';
     margin: 0;
 }
 
 div#PAUSADO {
     position: absolute;
-    display: none;
+    display: block;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 30;
+    background: rgba(0,0,0,0);
 }
 
 img.capa-PAUSADO {
@@ -144,7 +116,6 @@ p.TEMP-EP {
     height: auto;
     width: 100%;
     float: left;
-    box-shadow: 0px 3px 4px #111;
 }
 
 /*88888888888888888 PLAYER 88888888888888888*/ 
@@ -153,14 +124,14 @@ p.TEMP-EP {
 .left{float: left;}
 .right{float: right;}
 
-.conteiner{float: left;position: relative;border-radius: 4px;overflow:  hidden;box-shadow: 1px 1px 8px #000;}
+.conteiner{float: left;position: relative;border-radius: 4px;overflow:  hidden;min-height: 452px;box-shadow: 1px 1px 8px #000;background: #333333;border-bottom: 2px solid #333333;}
 
 
 
 /* VIDEO PLAYER*/
 .player-video{position: relative; width: 100%; height: 0; padding-bottom: 56.25%; overflow:hidden; background-color: #000;}
 .player-video video{width: -webkit-fill-available; left: 0; top: 0; height: 100%; position: absolute; left: 50%; transform: translateX(-50%);}
-.player-video .loader{position: absolute; display: none; width:50px; height: 50px; text-align: center; padding-top: 8px; top: calc(50% - 25px); left: calc(50% - 25px); background-color: #111; border-radius:5px; }
+.player-video .loader{position: absolute; display: none; width:75px; height: 75px; text-align: center; padding-top: 8px; top: calc(50% - 42px); left: calc(50% - 42px); background-color: rgba(0,0,0,0.7); border-radius:5px; }
 
 .player-video .loader span{display: block; color: #fff; font-size: 2.2em; animation: spin 2s linear infinite;}
 
@@ -229,3 +200,51 @@ p.TEMP-EP {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }		
+
+p.temporada_EPISODIO {
+    position: absolute;
+    right: 0%;
+    font-size: 12px;
+    background: #232323;
+    padding: 8px;
+    margin: 10px;
+    font-family: arial;
+    color: white;
+}
+
+.conteiner:hover .NAME-ANIME {
+    top: 0px;
+}
+
+.painelBotoesEp {
+    position: relative;
+    float: left;
+    width: 68.5%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botaoAnie {
+    background: #f44336;
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.ListaUltimosEpisodios {
+    overflow-x: hidden;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+    z-index: 10;
+    left: 50%;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,auto));
+    grid-row-gap: 6px;
+    grid-column-gap: 6px;
+}

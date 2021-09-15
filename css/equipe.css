@@ -16,7 +16,7 @@
 	height: 100%;
 }
 .uploader {
-    background: #ff6600;
+    background: #f44336;
     color: #1e1d1d;
     padding: 6px;
     border-radius: 3px;
@@ -48,23 +48,24 @@ h2 {
 }
 .Membros {
 	float: left;
-    width: 576px;
-    margin: 12px;
-    background: #1e1d1d;
-    box-shadow: inset 1px 3px 7px 0px rgb(21, 20, 20);
-    border-radius: 4px;
-    padding: 0px;
-  	min-height:303px;
-    position: relative;
+	width: 576px;
+	margin: 12px;
+	padding: 18px;
+	min-height: initial;
+	background: #1e1d1d;
+	box-shadow: inset 1px 3px 7px 0px rgb(21, 20, 20);
+	border-radius: 4px;
+	min-height:303px;
+	position: relative;
 }
 .Membros p {
 	font-size: 15px;
-    font-family: arial;
-    width: 385px;
-    clear: both;
-    font-style: italic;
-    float: left;
-    padding-left: 15px;
+	font-family: arial;
+	width: 385px;
+	clear: both;
+	font-style: italic;
+	float: left;
+	padding: 15px;
 }
 a.interresado {
     background: #ff6600;
@@ -107,15 +108,15 @@ p.Info-USER {
 }
 .Perfil {
 	float: left;
-    width: 104px;
-    border-radius: 50%;
-    height: 104px;
-    position: relative;
-    background: #ff6600;
-    padding: 0;
-    margin: 10px 5px;
-    list-style: none;
-    background:url(../IMagens/Ekaterina.png);
+	width: 104px;
+	border-radius: 50%;
+	height: 104px;
+	position: relative;
+	background: #ff6600;
+	padding: 0;
+	margin: 0px 5px;
+	list-style: none;
+	background:url(../IMagens/Ekaterina.png);
 }
 .interno {
 	color: rgba(255, 255, 255, 0.84);
@@ -144,7 +145,7 @@ p.Info-USER {
 }
 .Enfase {
 	font-size: 12px;
-    font-family: arial,roboto_bold;
+    font-family: arial;
     font-style: initial;
     color: white;
 }
@@ -156,20 +157,21 @@ p.Info-USER {
 }
 .M-detalhes {
 	position: absolute;
-    right: 12px;
-    border-radius: 2px;
-    top: 12px;
-    text-decoration: none;
-    font-family: arial,roboto_regular;
-    font-size: 13px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    background: #ff6600;
+	right: 12px;
+	border-radius: 2px;
+	top: 12px;
+	text-decoration: none;
+	font-family: arial;
+	font-size: 13px;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	background: #f44336;
 }
 .Users {
     float: left;
     min-width: 200px;
+    margin: 12px 12px;
 }
 
 
@@ -178,12 +180,12 @@ p.Info-USER {
 
 .Sites-Parceiros {
 	position: relative;
-    float: left;
-    width: 100%;
-    box-shadow: -1px -2px 5px 0px rgba(4, 4, 4, 0.35);
-    height: auto;
-    background-image: linear-gradient(90deg,#1e1d1d 0%,#1e1d1d 33.3%,#ff6600 0%,#ff6600 66.6%,#1e1d1d 0%,#1e1d1d 100%);
-    background-size: 100%;
+	float: left;
+	width: 100%;
+	box-shadow: -1px -2px 5px 0px rgba(4, 4, 4, 0.35);
+	height: auto;
+	background-image: linear-gradient(90deg,#1e1d1d 0%,#1e1d1d 33.3%,#f44336 0%,#f44336 66.6%,#1e1d1d 0%,#1e1d1d 100%);
+	background-size: 100%;
 }
 ul.LISTA-SITES {
     width: 100%;

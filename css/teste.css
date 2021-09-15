@@ -1,256 +1,278 @@
-@font-face {
-    font-family: "Verdan";
-    src: url("../fontes/verdana.ttf");
-  }
-  @font-face {
-    font-family: "roboto";
-    src: url("../fontes/Roboto.ttf");
-  }
-  @font-face {
-    font-family: "roboto_light";
-    src: url("../fontes/Roboto-Light.ttf");
-  }
-  @font-face {
-    font-family: "roboto_medium";
-    src: url("../fontes/Roboto-Medium.ttf");
-  }
-  @font-face {
-    font-family: "roboto_regular";
-    src: url("../fontes/Roboto-Regular.ttf");
-  }
-  @font-face {
-    font-family: "roboto_bold";
-    src: url("../fontes/Roboto-Bold.ttf");
-  }
-  @font-face {
-    font-family: "roboto_black";
-    src: url("../fontes/Roboto-Black.ttf");
-  }
-  
-  #Limites{
-      width: 100%;
-      position: absolute;
-      margin: 0 auto;
-      z-index: 10;
-      background:  #222;
-  }
-  .Filtros {
-      width: 100%;
-      margin: 71px auto;
-      height: auto;
-      float:  left;
-      padding: 15px;
-      border-radius: 0 0px 3px 3px;
-      position: relative;
-      background: #1e1d1d;
-  }
-  .Letras {
-      float: left;
-      width: 91%;
-      position:  relative;
-      left:  50%;
-      max-width: 1146px;
-      transform: translateX(-50%);
-  }
-  
-  .Diario {
-    position:  relative;
-    float:  left;
-    margin: 12px;
-    margin-left:  89px;
-    border-radius: 2px;
-    overflow:  hidden;
-  }
-  
-  .Ano {position:  relative;float:  left;margin:  12px;border-radius: 2px;overflow:  hidden;}
-  
-  .Diario select {
-    padding: 9px;
-    background: rgb(52,53,53);
-    color: white;
-    border: none;
-    float:  left;
-    font-family:  arial;
-    font-size: 12px;
-    clear: both;
-  }
-  
-  .Ano select {
-      padding: 9px;
-      background: rgb(52,53,53);
-      color: white;
-      border: none;
-      float: left;
-      font-family: arial;
-      font-size: 12px;
-      clear: both;
-  }
-  
-  .Diario button {
-    background: #fb4d26;
-    border: none;
-    color: white;
-    padding: 10px;
-    font-size: 12px;
-    float:  left;
-    font-family: arial;
-    position:  relative;
-  }
-  
-  .Ano button {background: #fb4d26;border: none;color: white;padding: 10px;font-size: 12px;float: left;font-family: arial;position: relative;}
-  
-  .Diario button:hover {
-    background: #ff6600;
-  }
-  
-  .Ano button:hover {
-    background: #ff6600;
-  }
-  
-  .Letra {
-      float: left;
-      background: rgb(52, 53, 53);
-      text-decoration: none;
-      margin: 2px;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      color: white;
-      font-family: arial;
-      padding: 14px;
-      font-size: 12px;
-  }
-  .Letra:hover {
-      cursor: pointer;
-      background: #fb4d26;
-  }
-  .Recentes {
-         width: 100%;
-      max-width: 1686px;
-      padding: 12px 0;
-      margin: 0 auto;
-  }
-  
-  .TodosAnimes {
-      width: 92%;
-      padding: 12px 0;
-      margin: 0 auto;
-      max-width: 1551px;
-      position:  relative;
-      float:  left;
-      left:  50%;
-      transform:  translateX(-50%);
-  }
-  
-  .Anime {
-      width: 299px; /*440*/
-      float: left;
-      margin: 9px 0px 0px 9px;
-      border-radius: 3px;
-      height: 453px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 1px 2px 4px 2px rgba(6, 6, 6, 0.68);
-  }
-  
-  .Generos {
-    position: relative;
-    height: 50px;
-    top: 78%;
-  }
-  
-  .nome-anime {
-      margin: 0;
-      position: absolute;
-      width: 100%;
-      font-size: 14px;
-      padding: 15px;
-      bottom: 0%;
-      z-index: 2;
-      text-shadow: 1px 1px 2px #000;
-      color: white;
-      font-family: roboto_regular;
-      background: linear-gradient(0deg,rgba(0, 0, 0, 0.76) 0%,transparent 100%);
-  }
-  .thumb-episodio {
-      background: #1b1a1a url(../Imagens/KNT.jpg) no-repeat;
-      background-size: cover;
-      height: 100%;
-      float: left;
-      width: 100%;
-      position: relative;
-      background-size: 100%;
-      background-position-x: center;
-      transition: .5s;
-  }
-  .thumb-episodio:hover  {
-    /*background-position-y: 50%;
-      background-size: 148%; */
-  
-  }
-  .Info-anime {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      right: 100%;
-      background: rgba(27, 26, 26, 0.88);
-      transition-duration: .2s;
-  }
-  p.info {
-      width: auto;
-      padding: 6px 12px 0 16px;
-      margin: 0;
-      color:#a5a1a1;
-      font-family: roboto_light;
-      font-size: 13px;
-      float: left;
-      position: relative;
-      clear: both;
-  }
-  .name-info {
-      font-family: roboto_bold;
-      font-size: 13px;
-      color: #fb4d26;
-  }
-  .thumb-episodio:hover .Info-anime {
-       right: 0%;
-  }
-  .temporada-Info {
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      padding: 6px;
-      background: #1e1d1d;
-      border: 1px solid white;
-      color: white;
-  }
-  .link-anime {
-      position: absolute;
-      right: 6%;
-      padding: 10px;
-      top: -65%;
-      border: 1px solid;
-      color: white;
-      text-decoration: none;
-      font-size: 13px;
-      float:  right;
-      font-family: arial;
-  }
-  .Sinopse {
-      color: #f2f2f2bd;
-      font-family: arial;
-      padding: 12px 16px;
-      max-height: 297px;
-      float: left;
-      overflow-y: auto;
-      font-size: 13px;
-      margin-top: 8px;
-      white-space: initial;
-  }
-  
-  .Anime:hover .nome-anime {
-      position:  relative;
-      background:  none;
-      text-align: initial;
-      font-size: 13px;
-  }
+body {
+  background-color: #151515;
+}
+#Limites{
+  width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  z-index: 10;
+  background:  #222;
+}
+.Filtros {
+  width: 100%;
+  margin: 71px auto;
+  height: auto;
+  float:  left;
+  padding: 15px;
+  border-radius: 0 0px 3px 3px;
+  position: relative;
+  background: #1e1d1d;
+}
+.Letras {
+  float: left;
+  width: 91%;
+  position:  relative;
+  left:  50%;
+  max-width: 1146px;
+  transform: translateX(-50%);
+}
+
+.Diario {
+position:  relative;
+float:  left;
+margin: 12px;
+margin-left:  89px;
+border-radius: 2px;
+overflow:  hidden;
+}
+
+.Ano {position:  relative;float:  left;margin:  12px;border-radius: 2px;overflow:  hidden;}
+
+.Diario select {
+padding: 9px;
+background: rgb(52,53,53);
+color: white;
+border: none;
+float:  left;
+font-family:  arial;
+font-size: 12px;
+clear: both;
+}
+
+.Ano select {
+  padding: 9px;
+  background: rgb(52,53,53);
+  color: white;
+  border: none;
+  float: left;
+  font-family: arial;
+  font-size: 12px;
+  clear: both;
+}
+
+.Diario button {
+background: #fb4d26;
+border: none;
+color: white;
+padding: 10px;
+font-size: 12px;
+float:  left;
+font-family: arial;
+position:  relative;
+}
+
+.Ano button {background: #fb4d26;border: none;color: white;padding: 10px;font-size: 12px;float: left;font-family: arial;position: relative;}
+
+.Diario button:hover {
+background: #ff6600;
+}
+
+.Ano button:hover {
+background: #ff6600;
+}
+
+.Letra {
+  float: left;
+  background: rgb(52, 53, 53);
+  text-decoration: none;
+  margin: 2px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-family: arial;
+  padding: 14px;
+  font-size: 12px;
+}
+.Letra:hover {
+  cursor: pointer;
+  background: #fb4d26;
+}
+.Recentes {
+     width: 100%;
+  max-width: 1686px;
+  padding: 12px 0;
+  margin: 0 auto;
+}
+
+.TodosAnimes {
+  max-width: 99%;
+  margin: 0 auto;
+  position:  relative;
+  display: grid;
+  float:  left;
+  left:  50%;
+  transform:  translateX(-50%);
+  grid-template-columns: repeat(auto-fill,minmax(247px,auto));
+  grid-column-gap: 3px;
+  grid-row-gap: 6px;
+}
+
+.Anime {
+  width: 100%; /*440*/
+  float: left;
+  border-radius: 3px;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  transition: .3s;
+  padding: 0;
+  padding-bottom: 158%;
+  box-shadow: 1px 2px 4px 2px rgba(6, 6, 6, 0.68);
+}
+
+.Generos {
+position: relative;
+height: 50px;
+top: 78%;
+}
+
+.nome-anime {
+  margin: 0;
+  position: absolute;
+  width: 88%;
+  padding: 17px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  font-size: 11px;
+  white-space: initial;
+  background: #212121;
+  text-transform: uppercase;
+  bottom: 4%;
+  z-index: 6;
+  color: white;
+  transition: 0.2s;
+  box-shadow: 0 0 4px 0px #151515;
+  font-family: 'Roboto';
+}
+.thumb-episodio {
+  background: #1b1a1a url(../img/KNT.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+  float: left;
+  width: 100%;
+  position: absolute;
+  background-size: 100%;
+  background-position-x: center;
+  transition: .5s;
+}
+.thumb-episodio:hover  {
+/*background-position-y: 50%;
+  background-size: 148%; */
+
+}
+.Info-anime {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  right: 100%;
+  z-index: 3;
+  background: rgba(27, 26, 26, 0.88);
+  transition-duration: .2s;
+}
+p.info {
+  width: auto;
+  padding: 6px 12px 0 16px;
+  margin: 0;
+  color:#a5a1a1;
+  font-family: 'Roboto';
+  font-size: 13px;
+  float: left;
+  position: relative;
+  clear: both;
+}
+.name-info {
+  font-family: 'Roboto';
+  font-size: 13px;
+  color: #fb4d26;
+}
+.thumb-episodio:focus .Info-anime {
+   right: 0%;
+}
+.temporada-Info {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 6px;
+  background: #1e1d1d;
+  border: 1px solid white;
+  color: white;
+}
+.link-anime {
+  position: absolute;
+  right: 6%;
+  padding: 10px;
+  top: 73%;
+  border: 1px solid;
+  color: white;
+  transform: translateY(100%);
+  text-decoration: none;
+  font-size: 13px;
+  float: right;
+  margin-top: 3%;
+  font-family: arial;
+}
+.Sinopse {
+  color: #f2f2f2bd;
+  font-family: arial;
+  padding: 12px 16px;
+  float: left;
+  font-size: 13px;
+  position: relative;
+  white-space: initial;
+  text-overflow: ellipsis;
+  top: 50%;
+  transform: translateY(-50%);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 16; /* number of lines to show */
+  line-height: 1;        /* fallback */
+  overflow: hidden;
+  max-height: 221px;
+}
+
+p.nome-anime:hover {
+  background: #232323de !important;
+  position: absolute;
+  background: none;
+  text-align: initial;
+  border: 2px solid #f44336;
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+  padding-left: 11px;
+  margin-left: 16px;
+}
+
+.INFo {padding: 0px;position: absolute;font-size: 14px;top: 50%;color: #f44336;right: 7%;transform: translateY(-50%);}
+
+.INFo:hover {
+cursor: pointer;
+}
+
+a.linkcapa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+}
+
+a.link-anime:hover {
+  transform: translateY(100%) scale(1.03);
+}
+
+.Anime:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}

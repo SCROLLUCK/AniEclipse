@@ -1,0 +1,24 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    container_name: aniedb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: aniedb
+      MYSQL_ROOT_PASSWORD: starred1234
+      MYSQL_PASSWORD: starred1234
+      MYSQL_DATABASE: aniedb
+    ports:
+      - '3306:3306'
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+       - "8082:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: starred1234
+      PMA: aniedb
+      PMA_USER: root
+      PMA_PASSWORD: starred1234

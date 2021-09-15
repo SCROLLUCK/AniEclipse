@@ -1,32 +1,3 @@
-@font-face {
-  font-family: "Verdan";
-  src: url("../fontes/verdana.ttf");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("../fontes/Roboto.ttf");
-}
-@font-face {
-  font-family: "roboto_light";
-  src: url("../fontes/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "roboto_medium";
-  src: url("../fontes/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: "roboto_regular";
-  src: url("../fontes/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "roboto_bold";
-  src: url("../fontes/Roboto-Bold.ttf");
-}
-@font-face {
-  font-family: "roboto_black";
-  src: url("../fontes/Roboto-Black.ttf");
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -39,6 +10,7 @@ body {
   padding: 0;
   position: relative;
   margin: 0 12px;
+  margin-right: 0px;
 }
 
 header {
@@ -50,27 +22,31 @@ header {
     background: #333;
 }
 .logo {
-    width: 61px;
-    height: 61px;
-    margin: 0px 5px;
+    width: 55px;
+    height: 59px;
+    margin: 0px;
     position:  absolute;
-    top: calc(50% - 31px);
-    background: #333;
-    z-index:  120;
     overflow:  hidden;
-    transform: skew(0deg);
+    top: 50%;
+    z-index: 2;
+    background: #F44336;
+    left: 0.7%;
+    transform: skew(0deg) translateY(-50%);
     float: left;
     transition-duration: .2s;
 }
 .logo-img {
-    width: 30px;
-    margin: 8px;
+    width: 29px;
+    margin: 9px;
     position: absolute;
-    transform: initial;
+    transform: skew(0deg);
 }
 .logo:hover {
     width: 234px;
-    transform: skew(-25deg);
+    z-index: 2;
+    top: 50%;
+    transform-style: unset;
+    transform: skew(-23deg) translateY(-50%);
 }
 .middle-2{
 	vertical-align: -webkit-baseline-middle;
@@ -79,7 +55,7 @@ p.logo-Ani {
     position: absolute;
     font-size: 34px;
     color: white;
-    padding-left: 28px;
+    padding-left: 47px;
     margin: 9px;
     transform: skew(24deg);
     height: 43px;
@@ -94,19 +70,21 @@ p.logo-Ani {
 .Busca {
 	float: left;
 	position: relative;
-	top: calc(50% - 21px);
 	width: 300px;
 	left: 65px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
 	height: 42px;
 	border-radius: 3px 5px 5px 3px;
 	/* box-shadow: 1px 0px 8px #272727; */
 }
 .btn-busca {
-	background: #fb4d26;
+	background: #e4e4e4;
 	float: right;
-	width: 14%;
+	width: 42px;
 	height: 42px;
-	border-radius: 0px 2px 2px 0px;
+	border-radius: 0px 3px 3px 0px;
 }
 .i-busca {
 	top: calc(50% - 10px);
@@ -127,19 +105,20 @@ input.input-busca {
   	color: #333;
   	float: left;
   	position: relative;
-  	font-family: roboto_regular;
+  	font-family: 'Roboto';
+  	height: 42px;
   	font-weight: inherit;
   	background: rgb(228, 228, 228);
-  	width: 86%;
+  	width: calc(100% - 42px);
   	padding: 12px;
   	font-size: 15px;
   	outline:  none;
-  	border-radius: 4px 0px 0px 4px;
+  	border-radius: 3px 0px 0px 3px;
   	box-sizing: border-box;
 }
 
 .titulo-Opcao {
-	color: rgba(214, 211, 211, 0.69);
+	color: #333;
 	font-size: 14px;
 	font-family: arial;
 	border-radius: 3px;
@@ -150,6 +129,7 @@ input.input-busca {
 }
 .Opcao-nav:hover .titulo-Opcao {
 	background: #424141;
+	color: #bfbfbf;
 }
 ul.paginas {
     position: absolute;
@@ -160,7 +140,7 @@ ul.paginas {
     width: 300px;
     background: #2f2f2f;
     border-radius: 3px;
-    border-top: 3px solid #fb4d26;
+    border-top: 3px solid #F44336;
     box-shadow: 1px 1px 7px #333;
 }
 .Opcao-nav:hover ul.paginas {
@@ -177,7 +157,7 @@ ul.paginas {
 	display: block;
 	border-right: 13px solid transparent;
 	border-left: 13px solid transparent;
-	border-bottom: 13px solid #fb4d26;
+	border-bottom: 13px solid #F44336;
 }
 .white-space {
 	position: absolute;
@@ -206,7 +186,7 @@ ul.paginas {
     box-sizing: border-box;
 }
 .link-pagina:hover {
-	background: #fb4d26;
+	background: #F44336;
 	color: white;
 }
 .generos {}
@@ -252,7 +232,18 @@ ul.paginas {
 }
 .link-genero:hover {
 	color: white;
-    background: #fb4d26;
+    background: #F44336;
+    transform: scale(1.03);
+}
+.link-genero:active {
+	color: white;
+    background: #F44336;
+    transform: scale(0.97);
+}
+span.numeroObras {
+    font-size: 12px;
+    font-family: arial;
+    font-style: italic;
 }
 .quantidade {
     color: rgba(255, 255, 255, 0.88);
@@ -293,15 +284,16 @@ title {
     text-decoration: none;
     margin: 0;
 }
-
 .header-interno {
-    height: 60px;
+    height: 63px;
     width: 100%;
     top: 0%;
     z-index: 99999;
+    box-sizing: content-box;
     position: relative;
-    background: #333;
-    box-shadow: 0px 1px 7px #000;
+    background: #F44336;
+    box-shadow: 0px 0px 7px #000;
+    border-top: 4px solid #333333;
 }
 i.ICO-MENU-MOBILE {
     position: relative;
@@ -310,22 +302,28 @@ i.ICO-MENU-MOBILE {
     z-index: 2000;
     float: right;
     font-size: 29px;
-    color: #bfbfbf;
+    color: #333333;
 }
-
 .NAV-MOBILE {
     height: 60px;
     width: calc(100% - 366px);
     position: relative;
     right: 0;
     float:  right;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 .Opcao-nav {
     position:  relative;
     float:  left;
 }
-
+.INFOS_RESULTADOS {
+    box-shadow: 0 0 6px 1px #23201e;
+    width: 100%;
+    position: relative;
+    height: 107px;
+    transition: .4s;
+}
 p.resultados {
   display:none;
   font-size: 14px;
@@ -333,20 +331,321 @@ p.resultados {
   position: relative;
   width: 100%;
 }	
-
 .logo:hover .logo-img {
     transform: skew(24deg);
 }
-
 .CapsulaP {
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
-    padding-left: 15%;
+    padding-left: 22%;
     transition: 0.8s;
-    width:  100%;
+    padding: 19px 22%;
+    width: 100%;
+}
+.buscaP {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin: 0;
+    position: relative;
 }
 
+.BACK_RESULTADOS {
+    width: 486px;
+    display: inline-block;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 9px;
+    margin-bottom: initial;
+}
 .BACK_RESULTADOS:hover .CapsulaP {
     padding-left: 30%;
+}
+.INFOS_RESULTADOS {
+    box-shadow: 0 0 6px 1px #23201e;
+    width: 100%;
+    position: relative;
+    height: 107px;
+    transition: .4s;
+}
+.buscaIMG {
+    width: 63px;
+    height: auto;
+    float: left;
+    position: absolute;
+    bottom: 12px;
+    transition: .5s;
+    margin-right: 9px;
+}
+.subINFO {
+    position: absolute;
+    width: 100%;
+    float: left;
+    bottom: 0%;
+    min-height: 107px;
+    padding: 9px;
+    max-height: 115px;
+    background: rgba(48, 47, 47, 0.87);
+}
+.qualidade_EPISODIO {
+    margin: 0;
+    position: absolute;
+    right: 21px;
+    top: 22%;
+    background: #F44336;
+    padding: 1.3%;
+    font-size: 12px;
+    border-radius: 2px;
+    color: #333;
+}
+.BACK_RESULTADOS:hover .INFOS_RESULTADOS {
+    height: 222px;
+}
+.BACK_RESULTADOS:hover .buscaIMG {
+    width: 137px;
+    /* top: -102px; */
+}
+#qTip {
+    padding: 9px;
+    display: none;
+    box-shadow: 1px 1px 1px #1d1c1c;
+    border-radius: 3px;
+    background: #333;
+    color: white;
+    font: 'Roboto';
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    z-index: 1000000;
+  }
+
+.jumbotron {
+    width: 504px;
+    top: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    height: auto;
+    left: 5%;
+    background: #2b2b2b;
+    z-index: -1;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 1px 1px 10px #000;
+}
+div#MostraPesq {
+    height: auto;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    float: left;
+    max-height: 544px;
+    width: 523px;
+}
+a.link-perfil {
+    float: left;
+}
+.LINK-BB {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+span.enfase {
+    color: #f44336;
+    font-family: arial;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.N-ENCONTRADO {
+    color: white;
+    padding: 17px;
+    font-size: 15px;
+    font-family: arial;
+}
+
+@media screen and (max-width: 701px){
+    .header-interno {
+        height: 60px;
+        width: 100%;
+        top: 0%;
+        z-index: 99999;
+        position: relative;
+        box-shadow: 0px 1px 7px #000;
+    }
+    .logo {
+        width: 12%;
+        height: 100%;
+        float: left;
+        transition-duration: .2s;
+        left: 2%;
+    }
+    .logo-img {
+        transform: initial;
+        top: -2px;
+    }
+    .Busca {
+        width: 66%;
+        left: 16%;
+        /* box-shadow: 1px 0px 8px #272727; */
+    }
+    .jumbotron {
+        max-height: 950%;
+        width: 100%;
+        top: 100%;
+        position: absolute;
+        overflow-y: scroll;
+        float: left;
+        left: initial;
+    }
+    i.ICO-MENU-MOBILE {
+        position: absolute;
+        padding: 0% 5%;
+        right: 0%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2000;
+        display: block;
+        float: right;
+    }
+    .NAV-MOBILE {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        margin: 4px;
+        max-width: 300px;
+        background: #2f2f2f;
+        display: none;
+        overflow: hidden;
+        border-radius: 4px;
+        transform: none;
+        top: 65px;
+    }
+    .mobile-nav {
+        width: 100%;
+        height: auto;
+        float: right;
+        top: 107%;
+        padding: 0;
+        position: relative;
+        right: 0%;
+        margin: 0;
+    }
+    .Opcao-nav {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        padding: 0px;
+    }
+    .titulo-Opcao {
+        color: rgba(214, 211, 211, 0.69);
+        font-size: 12px;
+        font-family: arial;
+        border-radius: 3px;
+        position: relative;
+        float: left;
+        padding: 17px;
+        width: 100%;
+        text-decoration: none;
+        margin: 0;
+    }
+    ul.paginas {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        display: none;
+        float: left;
+        top: 0px;
+        width: 100%;
+        background: #2f2f2f;
+        border-radius: initial;
+        border-top: initial;
+        box-shadow: 1px 1px 7px #333;
+    }
+    .link-pagina {
+        width: 100%;
+        list-style: none;
+        padding: 17px 25px;
+        display: block;
+        float: left;
+        font-size: 12px;
+        background: #2b2b2b;
+        position: relative;
+        font-family: arial;
+        color: rgba(255, 255, 255, 0.58);
+    }
+    .sub-op {
+        position: relative;
+        left: initial;
+        display: none;
+        top: initial;
+        transform: initial;
+        width: 100%;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 3px;
+        height: 174px;
+        overflow-y: scroll;
+    }
+    .interacao-user {
+        height: auto;
+        padding: 0;
+        width: 100%;
+        position: relative;
+        float: left;
+        margin: 0;
+        background: #333;
+        padding: 12px;
+        border-top: 1px solid #515151;
+    }
+    .BACK_RESULTADOS {
+        width: 100%;
+        display: inline-block;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: initial;
+        box-sizing: unset;
+        margin: 0;
+    }
+    .subINFO {
+        position: absolute;
+        width: 100%;
+        float: left;
+        bottom: 0%;
+        padding: 9px;
+        max-height: 115px;
+        background: rgba(48, 47, 47, 0.87);
+    }
+	div#MostraPesq {
+		height: 100%;
+		position: relative;
+		float: left;
+		width: 100%;
+	}
+	.qualidade_EPISODIO {
+		right: 5%;
+	}
+	.NOME-user{
+		display:block !important;
+	}
+	.logout{
+		display:block !important;
+		width:auto !important;
+	}
+}
+
+@media screen and (max-width: 880px){
+	.NOME-user{
+		display:none;
+	}
+}
+@media screen and (max-width: 789px){
+	.logout{
+		display:none;
+		float: left !important;
+	}
 }

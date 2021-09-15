@@ -1,31 +1,3 @@
-@font-face {
-  font-family: "Verdan";
-  src: url("../fontes/verdana.ttf");
-}
-@font-face {
-  font-family: "roboto";
-  src: url("../fontes/Roboto.ttf");
-}
-@font-face {
-  font-family: "roboto_light";
-  src: url("../fontes/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: "roboto_medium";
-  src: url("../fontes/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: "roboto_regular";
-  src: url("../fontes/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: "roboto_bold";
-  src: url("../fontes/Roboto-Bold.ttf");
-}
-@font-face {
-  font-family: "roboto_black";
-  src: url("../fontes/Roboto-Black.ttf");
-}
 html{
   width: 100%;
   overflow-x: hidden;
@@ -223,7 +195,7 @@ html{
 }
 
 body{
-  font-family: Verdan;
+  font-family: arial;
   color:silver;
   margin: 0;
   padding: 0;
@@ -263,7 +235,7 @@ body{
   color:#ff6600;
   height:22px;
   width:69%;
-    font-family:Verdan;
+    font-family:arial;
 }
 
 .perfil {
@@ -302,7 +274,7 @@ body{
     padding: 11px;
     border-radius: 2px;
     margin: 7px;
-    font-family: Verdan;
+    font-family: arial;
     background: #333;
     float: right;
     color: #F2F2F2;
@@ -313,7 +285,7 @@ body{
   padding: 12px;
   margin: 0;
   float: left;
-  font-family: Verdan;
+  font-family: arial;
   font-size: 20px;
   color: rgba(26, 24, 24, 0.84);
 }
@@ -342,7 +314,7 @@ body{
 .tempoEp p{
   padding: 0;
     color: rgb(241, 237, 237);
-    font-family: Verdan;
+    font-family: arial;
     font-size: 61%;
     margin: 6px 2px 0px 2px;
     align-self: center;
@@ -359,7 +331,7 @@ div.temporadaInfo{
     border: 1px solid white;
 }
 div.temporadaInfo p{
-  font-family: Verdan;
+  font-family: arial;
     font-size: 65%;
     color: white;
     margin: 3px;
@@ -413,7 +385,7 @@ div.AnimeBanerTitulo h3{
   padding: 12px;
   margin: 0;
   float: left;
-  font-family: Verdan;
+  font-family: arial;
   font-size: 20px;
   color: rgba(26, 24, 24, 0.84);
 }
@@ -528,7 +500,7 @@ div.informacaoAnimeContainer p{
    padding: 8px;
    margin: 0;
    border-bottom: 1px solid #ff6600;
-   font-family: Verdan;
+   font-family: arial;
    color: white;
 }
 ul.Box:hover div.informacaoAnimeContainer{
@@ -639,7 +611,7 @@ ul.Animes-Lista {
 
 .Anime-Nome a {
     color: #00bfff;
-    font-family: Verdan;
+    font-family: arial;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
@@ -700,7 +672,7 @@ ul.Animes-Lista {
   padding: 12px;
   color:#ff6600;
   float:left;
-  font-family:Verdan;
+  font-family:arial;
 }
 .AnimeContainer :hover{
   cursor: pointer;
@@ -725,7 +697,7 @@ footer h2{
   line-height:20px;
   font-size:13px;
   color:#ff6600;
-  font-family:Verdan;
+  font-family:arial;
   text-align:center;
 }
 
@@ -760,7 +732,7 @@ p.temporada_EPISODIO {
 
 .buscaP {
   color: #333;
-  font-family: roboto_bold;
+  font-family: 'Roboto';
   font-size: 12px;
   margin: 0;
   position: relative;
@@ -773,7 +745,7 @@ p.temporada_EPISODIO {
     float: left;
     background: #ff4800;
     white-space: initial;
-    font-family: roboto_regular;
+    font-family: 'Roboto';
     overflow-wrap: break-word;
     position: relative;
     border-radius: 3px;

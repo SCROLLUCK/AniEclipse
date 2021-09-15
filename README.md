@@ -1,2 +1,1 @@
-# AnieEclipse
-back do Anie
+To start the aplication on this path use the current command: php -S 0.0.0.0:8080

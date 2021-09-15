@@ -8,8 +8,11 @@ body{
 #EPS {
     float: left;
     padding: 0;
+    position: relative;
     background-size: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(24, 23, 23, 0.62);
+    padding: 64px 40px;
+    overflow-x: hidden;
 }
 
 #nome-anime {
@@ -21,9 +24,9 @@ body{
     position: relative;
     max-width: 59%;
     /* clear: both; */
-    font-family: roboto_regular;
+    font-family: 'Roboto';
     padding: 0;
-    margin: 34px;
+    margin: 35px 3%;
     margin-bottom: 16px;
 }
 
@@ -43,7 +46,7 @@ body{
     position: relative;
 }
 
-img.LOGO {
+img.LOGO_ANIME {
     height: 100%;
     position: relative;
     float: left;
@@ -52,6 +55,7 @@ img.LOGO {
 .parallax {
     margin: 0 auto;
     width: 100%;
+    max-width: 100%;
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -76,9 +80,10 @@ div#home:hover #back-blur {
 
 #info-anime {
     height: auto;
-    background: rgba(0,0,0,0.4);
+    background: rgba(24, 23, 23, 0.62);
     float: left;
     width: 100%;
+    background-size: 50px 50px;
 }
 .INFO {
     position: relative;
@@ -91,7 +96,6 @@ div#home:hover #back-blur {
 ul.EPISODIOS {
     float: left;
     position: relative;
-    background: rgb(33,32,32);
     width: auto;
     width: 100%;
     height: auto;
@@ -99,7 +103,7 @@ ul.EPISODIOS {
     left: 50%;
     transform: translateX(-50%);
     display:  grid;
-    grid-template-columns:  repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns:  repeat(auto-fill,minmax(300px,auto));
     grid-row-gap:  6px;
     grid-column-gap:  6px;
     padding: 6px;
@@ -107,12 +111,10 @@ ul.EPISODIOS {
 
 .Info-anime {
     position: relative;
-    width: 61%; /* mobile 64%*/
-    max-width: 768px;
+    width: 65%; /* mobile 64%*/
     float: left;
-    /* margin-bottom: 90px; */
     height: auto;
-    margin-left: 2%;
+    padding: 0 3%;
     overflow: hidden;
     border-radius: 3px;
     /* background: rgba(48, 47, 47, 0.87); */
@@ -120,9 +122,9 @@ ul.EPISODIOS {
 }
 .info {
     width: 100%;
-    padding: 6px 12px 0 12px;
+    padding: 2px 0px;
     margin: 0;
-    font-family: roboto_light;
+    font-family: 'Roboto';
     font-size: 14px;
     float: left;
     text-decoration: none;
@@ -131,20 +133,25 @@ ul.EPISODIOS {
     clear: both;
 }
 .name-info {
-    font-family: roboto_bold;
+    font-family: 'Roboto';
     font-size: 15px;
     color: rgba(255, 255, 255, 0.75);
+}
+span.GG {
+    position: relative;
+    float: left;
+    padding: 5px 0px;
 }
 .thumb-episodio:hover .Info-anime {
      right: 0%;
 }
 .temporadaAtual {
-    width: 34%;
+    width: 35%;
     position: relative;
     float: left;
     /* margin-bottom: 90px; */
     border-radius: 4px;
-    box-shadow: 1px 1px 11px #000;
+    /* box-shadow: 1px 1px 6px #000; */
     overflow: hidden;
 }
 .temporada-Info {
@@ -155,31 +162,34 @@ ul.EPISODIOS {
     padding: 6px;
     font-size: 13px;
     color: white;
-    font-family: roboto_regular;
+    font-family: 'Roboto';
 }
 img.capa {
     width: 100%;
     position: relative;
+    border-radius: 4px;
     float: left;
 }
 .cap-conveniente {
     position: relative;
     width: 100%;
     height: auto;
+    overflow: visible;
+    margin: 0px;
     float: left;
 }
 .Sinopse {
     color: silver;
+    position: relative;
     font-family: arial;
-    padding: 0px 12px;
+    padding: 20px 3%;
     float: left;
-    max-width: 100%;
-    display: -webkit-box;
+    max-width: 65%;
     -webkit-line-clamp: 14;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    padding-top: inherit;
     text-overflow: ellipsis;
-    margin-bottom: 30px;
     font-size: 15px;
 }
 
@@ -194,9 +204,10 @@ p.faixa {
     font-family: arial;
     background: #ff0046;
     position: relative;
-    font-size: 34px;
+    font-size: 36px;
     float: right;
     border-radius: 3px;
+    box-shadow: 0px 0px 7px rgba(10, 10, 10, 0.71);
 }
 .info-visual {
     position: absolute;
@@ -212,6 +223,7 @@ p.faixa {
     border-radius: 50%;
     float: right;
     margin-right: 14px;
+    box-shadow: 0px 0px 7px rgba(10, 10, 10, 0.71);
 }
 .EPISODIO {
     width: 261px;
@@ -227,14 +239,14 @@ p.faixa {
     margin: 6px 3px;
 }
 .linkAnimes {
-    background: #ff4800;
-    padding: 7px;
+    background: #f44336;
+    padding: 6px;
     position: relative;
     text-decoration: none;
     float: left;
     color: white;
     border-radius: 2px;
-    margin: 0 0 5px 5px;
+    margin: 0px 0 0px 5px;
 }
 
 a.numero-EP {
@@ -247,9 +259,11 @@ a.numero-EP {
     position: relative;
     max-width: 1200px;
     left: 50%;
+    border-radius: 4px;
     background: rgba(48, 47, 47, 0.87);
     transform: translateX(-50%);
-    margin-bottom: 90px;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 11px #000;
 }
 .ant { left: 0%;}
 .prox { right: 0%; }
@@ -258,16 +272,18 @@ a.numero-EP {
     width: 51px;
     text-align: center;
     z-index: 30;
-    height: 236px;
+    height: 201px;
     position: absolute;
     background: rgba(48, 47, 47, 0.87);
+    box-shadow: 0px 0px 10px rgb(28, 28, 28);
 }
 
 .SETA-ico {
-    top: calc(50% - 22px);
+    top: 50%;
     color: silver;
+    transform: translateY(-50%);
     position: relative;
-    font-size: 44px;
+    font-size: 33px !important;
 }
 
 .O-ant { left:  70px; }
@@ -302,3 +318,160 @@ a.numero-EP {
     right: -20px;
 }
 .seta:hover .O-temporada { display: block; }
+
+.but {
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px 13px;
+    background: #f44336;
+    font-size: 19pt;
+    right: 0%;
+    color: #333333;
+    outline: none;
+    margin: 9px;
+    cursor: pointer;
+    top: -76px;
+    margin-left: 0;
+    text-shadow: none;
+    border: none;
+    box-shadow: 0px 0px 7px rgba(10, 10, 10, 0.71);
+}
+.but2 {
+    right: 58px;
+}
+
+button.but:active {
+    transform: scale(0.9);
+}
+p.meioObvio {
+    position: absolute;
+    background: #333333;
+    font-size: 13px;
+    margin: 15px;
+    color: white;
+    z-index: 3;
+    padding: 9px;
+    right: 3px;
+}
+.temporadaInfo {
+    position: absolute;
+    z-index: 2;
+    background: rgba(53, 51, 50, 0.88);
+    font-size: 13px;
+    padding: 5px;
+    font-weight: 500;
+    color: white;
+    font-family: arial;
+    margin: 10px;
+    border-radius: 2px;
+}
+.temporadas {
+    position: relative;
+    float: left;
+    width: calc(100% - 388px);
+    height: 81%;
+    top: 16%;
+}
+
+p.OP_temp {
+    padding: 11px;
+    font-size: 12px;
+    user-select: none;
+}
+@media screen and (max-width: 772px){
+    .Sinopse{
+        max-width:100%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #nome-anime{
+        max-width: 100%;
+        padding: 4%;
+    }
+    .temporadaAtual{
+        width:100%;
+    }
+    .Info-anime{
+        width:100%;
+        padding: 0px 7%;
+    }
+    .Sinopse{
+        padding: 0% 7%;
+        padding-bottom: 4%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .info-visual{
+        bottom: initial;
+        top: -57%;
+        z-index: 22;
+    }
+    .but{
+        position: absolute;
+        top: 0px;
+        right: 56px;
+        z-index: 2;
+    }
+    .temporadaAtual {
+        width: 100%;
+        position: relative;
+        float: left;
+        /* margin-bottom: 90px; */
+        border-radius: 4px;
+        box-shadow: 1px 1px 11px #000;
+        overflow: hidden;
+    }
+    .ENGLOBAL {
+        position: relative;
+        float: right;
+        padding: 93px 80px 38px 55px;
+        width: auto;
+        height: auto;
+        display: none;
+        margin: 0 73px;
+        border-radius: 8px;
+    }
+    .INFO {
+        position: relative;
+        padding-top: 24%;
+        float: left;
+        width: 100%;
+        z-index: 2;
+    }
+    .CENTER {
+        width: 91%;
+        position: relative;
+        max-width: 1200px;
+        left: 50%;
+        background: rgba(48, 47, 47, 0.87);
+        transform: translateX(-50%);
+        margin-bottom: 90px;
+    }
+    #nome-anime {
+        font-size: 34px;
+        float: left;
+        color: white;
+        max-width: initial;
+        text-shadow: 1px 1px 2px #101010;
+        z-index: 3;
+        position: relative;
+        margin: 0;
+        width: 100%;
+        /* clear: both; */
+        font-family: 'Roboto';
+        padding: 21px;
+    }
+    .Info-anime {
+        position: relative;
+        width: 95%;
+        max-width: 768px;
+        float: left;
+        height: auto;
+        overflow: inherit;
+        border-radius: 3px;
+        transition-duration: .2s;
+    }
+}
+
